@@ -1,0 +1,40 @@
+.btn {
+  padding: 1rem 2rem;
+  display: inline-block;
+  border-radius: 32px;
+  border: none;
+  position: relative;
+  background: var(--primary-linear-gradient);
+  z-index: 1;
+  color: #fff;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    border-radius: 32px;
+    background-color: #000;
+    z-index: -1;
+  }
+  &.secondaryBtn {
+    border: 2px solid #fff;
+    color: #fff;
+    background: #000;
+    &::before {
+      display: none;
+    }
+  }
+  &.fit {
+    width: fit-content;
+  }
+  &.gradient {
+    border-radius: 10px;
+    background: linear-gradient(225deg, #18c8ff 0%, #933ffe 100%);
+    &::before {
+      display: none;
+    }
+  }
+}
