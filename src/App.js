@@ -4,6 +4,7 @@ import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import Home from 'src/pages/home';
 import IndustryPage from './pages/industry';
+import ProductPage from './pages/product';
 import { Routes, Route } from 'react-router-dom';
 
 const GlobalStyle = createGlobalStyle`
@@ -63,6 +64,7 @@ const App = () => {
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/industries/:id" element={<IndustryPage />} />
+        <Route path="/products/:id" element={<ProductPage />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />
