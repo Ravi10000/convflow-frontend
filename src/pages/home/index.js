@@ -1,6 +1,7 @@
 import React from 'react';
-import { Carousel, Col, Container, Row } from 'react-bootstrap';
+import { Button, Carousel, Col, Container, Form, Row } from 'react-bootstrap';
 import { styled } from 'styled-components';
+import { BsArrowRight } from 'react-icons/bs';
 
 const assets = {
   heroImg: 'assets/images/hero-img.png',
@@ -8,7 +9,12 @@ const assets = {
   bgImg: 'assets/images/bg-img.png',
   train: 'assets/images/train.png',
   interface: 'assets/images/interface.png',
-  cloud: 'assets/images/cloud.png'
+  cloud: 'assets/images/cloud.png',
+  model: 'assets/images/model.png',
+  testing: 'assets/images/testing.png',
+  group1: 'assets/images/group-icon-1.png',
+  calender: 'assets/images/calender.png',
+  formImg: 'assets/images/form-img.png'
 };
 
 const MainTitle = styled.h1`
@@ -94,6 +100,101 @@ const ProductWrapper = styled.section`
     border: 1px solid #497cff;
     border-radius: 4px;
     display: inline-block;
+  }
+`;
+
+const HighLightText = styled.h3`
+  font-family: var(--secondary-font);
+  margin-bottom: 1.5rem;
+  span {
+    background: linear-gradient(270deg, #00f0ff 10%, #5200ff 60%, #ff2df7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  & ~ p {
+    margin-bottom: 3rem;
+  }
+  & ~ a {
+    padding: 0.8rem 2rem;
+    display: inline-block;
+    border-radius: 32px;
+    border: none;
+    position: relative;
+    background: linear-gradient(270deg, #00f0ff 10%, #5200ff 60%, #ff2df7 100%);
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      left: 2px;
+      border-radius: 32px;
+      background-color: #000;
+      z-index: -1;
+    }
+    svg {
+      margin-left: 1rem;
+    }
+  }
+`;
+
+const Widget = styled.div`
+  padding: 3rem;
+  background-color: #171717;
+  border-radius: 12px;
+
+  h2 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    padding: 1rem 2rem;
+    background: linear-gradient(225deg, #18c8ff 15%, #933ffe 100%);
+    border-radius: 8px;
+    display: inline-block;
+  }
+`;
+
+const FormWrapper = styled.div`
+  margin-top: 2rem;
+
+  .form-control {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+
+    &:focus {
+      box-shadow: none;
+      border: 0;
+      border-bottom: 2px solid #fff;
+    }
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.75);
+      opacity: 1;
+    }
+  }
+  button[type='submit'] {
+    background: transparent;
+    border: 1px solid #f0a6cb;
+    padding: 0.8rem 2.5rem;
+    border-radius: 32px;
+
+    &:focus {
+      background-color: transparent;
+      border: 1px solid #f0a6cb;
+    }
+    svg {
+      margin-left: 1rem;
+    }
   }
 `;
 
@@ -240,7 +341,7 @@ const Home = () => {
             <Col xs={12} md={4}>
               <h3>Interface</h3>
               <p>
-                Building LLM powered applications was never easier. ConvFlow’s
+                Building LLM powered applications was never easier. ConvFlow's
                 low-code platform to make productionizing LLMs a breeze. Go from
                 experimenting to production 10x faster!
               </p>
@@ -275,28 +376,129 @@ const Home = () => {
           </Col>
         </Row>
         <Container>
-          <Row className="justify-content-around">
-            <Col xs={12} md={5}>
-              <h3>Secure and Private Deployments, made easy</h3>
+          <Row className="justify-content-around mb-4">
+            <Col xs={12} md={6} lg={5} className="order-2 order-md-1">
+              <HighLightText>
+                <span>Secure and Private Deployments</span>,<br /> made easy
+              </HighLightText>
               <p>
                 Your models and applications can be simply deployed on your VPC
                 with a few clicks. Your data and models never leave your system.
                 Seamlessly transition to new cloud platforms without locking
                 yourself in.
               </p>
-              <a href="#link">Learn more</a>
+              <a href="#link">
+                Learn more <BsArrowRight />
+              </a>
             </Col>
-            <Col xs={12} md={5}>
-              <img src={assets.group} alt="" />
+            <Col xs={12} md={6} lg={5} className="order-1 order-md-2">
+              <img src={assets.model} alt="" />
             </Col>
           </Row>
-          <Row className="justify-content-between">
-            <Col xs={12} md={4}></Col>
-            <Col xs={12} md={4}></Col>
+          <Row className="justify-content-around mb-4">
+            <Col xs={12} md={6} lg={5}>
+              <img src={assets.model} alt="" />
+            </Col>
+            <Col xs={12} md={6} lg={5}>
+              <HighLightText>
+                <span>Your data</span>,<br /> Your model
+              </HighLightText>
+              <p>
+                Own the model that's trained on your own data. Build proprietary
+                models for use cases to establish a strong competitive advantage
+                for your business.
+              </p>
+              <a href="#link">
+                Learn more <BsArrowRight />
+              </a>
+            </Col>
           </Row>
-          <Row className="justify-content-between">
-            <Col xs={12} md={4}></Col>
-            <Col xs={12} md={4}></Col>
+          <Row className="justify-content-around mb-4">
+            <Col xs={12} md={6} lg={5} className="order-2 order-md-1">
+              <HighLightText>
+                <span>Build Fast</span>,<br /> Test Faster
+              </HighLightText>
+              <p>
+                Our drag and drop no-code platform allows you to cut significant
+                time in data preparation, fine-tuning LLMs, pipeline building,
+                and deployment. Everything is super easy and all it needs is a
+                few clicks.
+              </p>
+              <a href="#link">
+                Learn more <BsArrowRight />
+              </a>
+            </Col>
+            <Col xs={12} md={6} lg={5} className="order-1 order-md-2">
+              <img src={assets.testing} alt="" />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+      <section>
+        <Container>
+          <Widget>
+            <Row>
+              <Col xs={12} md={6}>
+                <h2>Schedule a Demo</h2>
+                <p>
+                  Interested in a use case for your business? Want to explore
+                  how to use Generative AI to drive innovation, streamline
+                  operations, and redefine customer experience?
+                </p>
+                <p>Our AI experts are here to listen and provide solutions.</p>
+                <a href="#link">Book a call</a>
+              </Col>
+              <Col xs={12} md={6}>
+                <img src={assets.calender} alt="" />
+              </Col>
+            </Row>
+          </Widget>
+        </Container>
+      </section>
+      <section>
+        <Container>
+          <Row className="align-items-center">
+            <Col xs={12} md={12} lg={8}>
+              <h1>Let's talk</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempos Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempos
+              </p>
+              <FormWrapper>
+                <Form>
+                  <Form.Group className="mb-5">
+                    <Form.Control type="text" placeholder="Your name" />
+                  </Form.Group>
+                  <Form.Group className="mb-5">
+                    <Form.Control type="email" placeholder="Work email" />
+                  </Form.Group>
+                  <Form.Group className="mb-5">
+                    <Form.Control type="text" placeholder="Title" />
+                  </Form.Group>
+                  <Form.Group className="mb-5">
+                    <Form.Control type="text" placeholder="Company" />
+                  </Form.Group>
+                  <Form.Group className="mb-5">
+                    <Form.Control type="text" placeholder="Usecase" />
+                  </Form.Group>
+                  <Form.Group className="mb-5">
+                    <Form.Control
+                      as="textarea"
+                      rows={4}
+                      placeholder="Message"
+                    />
+                  </Form.Group>
+                  <Button type="submit">
+                    Send
+                    <BsArrowRight />
+                  </Button>
+                </Form>
+              </FormWrapper>
+            </Col>
+            <Col xs={12} md={12} lg={4}>
+              <img src={assets.formImg} alt="" />
+            </Col>
           </Row>
         </Container>
       </section>
