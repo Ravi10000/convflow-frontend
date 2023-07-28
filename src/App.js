@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import Home from 'src/pages/home';
+import IndustryPage from './pages/industry';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -58,7 +59,8 @@ const App = () => {
     <>
       <GlobalStyle />
       <Header />
-      <Home />
+      {/* <Home /> */}
+      <IndustryPage />
       <Footer />
     </>
   );

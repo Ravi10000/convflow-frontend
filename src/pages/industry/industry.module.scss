@@ -1,0 +1,122 @@
+.container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  .featuresContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+  .benefitsContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    .group {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      .buttonsContainer {
+        display: flex;
+        gap: 10px;
+      }
+      .benefitsHead {
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+      }
+      .benefitsList {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        .benefit {
+          h4 {
+            font-size: 2rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .benefitImage {
+      width: 70%;
+      height: fit-content;
+    }
+  }
+  .askDemo {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: #171717;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    .bgBlur {
+      top: 0%;
+      left: 0%;
+      transform: translate(-20%, -50%) scale(2);
+      opacity: 0.6;
+      position: absolute;
+    }
+    .group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      .title {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      .description {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    }
+    .image {
+      width: 80%;
+      max-width: 300px;
+      height: fit-content;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    .askDemo {
+      padding: 3rem 5rem;
+      flex-direction: row;
+      .bgBlur {
+        top: 50%;
+        left: 50%;
+        transform: scale(1) translate(-20%, -60%);
+      }
+
+      .group {
+        align-items: flex-start;
+        text-align: start;
+        max-width: 500px;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    .benefitsContainer {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 50px;
+      p {
+        max-width: 550px;
+      }
+
+      .benefitImage {
+        width: 40%;
+        height: fit-content;
+      }
+    }
+  }
+}
