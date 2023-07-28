@@ -4,6 +4,7 @@ import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import Home from 'src/pages/home';
 import IndustryPage from './pages/industry';
+import { Routes, Route } from 'react-router-dom';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -59,8 +60,11 @@ const App = () => {
     <>
       <GlobalStyle />
       <Header />
-      {/* <Home /> */}
-      <IndustryPage />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/industries/:id" element={<IndustryPage />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
       <Footer />
     </>
   );
