@@ -6,6 +6,7 @@ import Head from './head';
 import FeatureCard from './feature-card/feature-card';
 import CustomButton from 'src/components/custom-button/custom-button';
 import CustomCarousel from 'src/components/carousel/carousel';
+import GetStartedCard from 'src/components/get-started-card/get-started-card';
 
 function IndustryPage() {
   const { id } = useParams();
@@ -62,23 +63,7 @@ function IndustryPage() {
           alt={industry?.benefits?.title}
         />
       </div>
-      <div className={styles.askDemo}>
-        <div className={styles.group}>
-          <h3 className={styles.title}>Schedule a live demo</h3>
-          <p className={styles.description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempos Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempos
-          </p>
-          <CustomButton gradient>Get started</CustomButton>
-        </div>
-        <img className={styles.image} src="/assets/images/bag.png" alt="" />
-        <img
-          className={styles.bgBlur}
-          src="/assets/images/blur-bg.png"
-          alt=""
-        />
-      </div>
+      <GetStartedCard />
     </div>
   );
 }
