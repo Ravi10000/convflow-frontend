@@ -1,7 +1,9 @@
 import React from 'react';
-import { Button, Carousel, Col, Container, Form, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { styled } from 'styled-components';
 import { BsArrowRight } from 'react-icons/bs';
+import CustomCarousel from 'src/components/carousel/carousel';
+import GetStartedCard from 'src/components/get-started-card/get-started-card';
 
 const assets = {
   heroImg: 'assets/images/hero-img.png',
@@ -46,42 +48,6 @@ const HeroLink = styled.a`
     background-color: #000;
     z-index: -1;
   }
-`;
-
-const HeroCarousel = styled(Carousel)`
-  width: 100%;
-
-  & .carousel-indicators {
-    margin-bottom: -3rem;
-  }
-  & .carousel-indicators [data-bs-target] {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    opacity: 1;
-  }
-  & .carousel-indicators .active {
-    background-color: #f29cd1;
-  }
-
-  & .carousel-inner {
-    width: 100%;
-
-    & .carousel-item {
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      overflow: hidden;
-      z-index: 1;
-    }
-  }
-`;
-
-const SwiperHead = styled.h5`
-  background: var(--primary-linear-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 1rem;
 `;
 
 const Heading = styled.h2`
@@ -217,102 +183,7 @@ const Home = () => {
           </Row>
         </Container>
         <img src={assets.heroImg} alt="" />
-        <Container>
-          <Row>
-            <Col xs={12}>
-              <HeroCarousel controls={false}>
-                <Carousel.Item interval={1000}>
-                  <Row className="gx-5">
-                    <Col xs={12} md={6}>
-                      <SwiperHead>Customer Success Story</SwiperHead>
-                      <h3 className="mb-4">
-                        Reimagining Insurance Buying with LLMs
-                      </h3>
-                      <p className="mb-5">
-                        Learn more on how one of our early adopters in the
-                        Insurance sector is leveraging the power of Generative
-                        AI to increase conversion rates through its network of
-                        field sales agents.
-                      </p>
-                      <HeroLink href="#link" $noMarginX>
-                        Read Case Study
-                      </HeroLink>
-                    </Col>
-                    <Col xs={12} md={6} className="text-center">
-                      <img src={assets.group} alt="" />
-                    </Col>
-                  </Row>
-                </Carousel.Item>
-                <Carousel.Item interval={2000}>
-                  <Row className="gx-5">
-                    <Col xs={12} md={6}>
-                      <SwiperHead>Customer Success Story</SwiperHead>
-                      <h3 className="mb-4">
-                        Reimagining Insurance Buying with LLMs
-                      </h3>
-                      <p className="mb-5">
-                        Learn more on how one of our early adopters in the
-                        Insurance sector is leveraging the power of Generative
-                        AI to increase conversion rates through its network of
-                        field sales agents.
-                      </p>
-                      <HeroLink href="#link" $noMarginX>
-                        Read Case Study
-                      </HeroLink>
-                    </Col>
-                    <Col xs={12} md={6} className="text-center">
-                      <img src={assets.group} alt="" />
-                    </Col>
-                  </Row>
-                </Carousel.Item>
-                <Carousel.Item interval={3000}>
-                  <Row className="gx-5">
-                    <Col xs={12} md={6}>
-                      <SwiperHead>Customer Success Story</SwiperHead>
-                      <h3 className="mb-4">
-                        Reimagining Insurance Buying with LLMs
-                      </h3>
-                      <p className="mb-5">
-                        Learn more on how one of our early adopters in the
-                        Insurance sector is leveraging the power of Generative
-                        AI to increase conversion rates through its network of
-                        field sales agents.
-                      </p>
-                      <HeroLink href="#link" $noMarginX>
-                        Read Case Study
-                      </HeroLink>
-                    </Col>
-                    <Col xs={12} md={6} className="text-center">
-                      <img src={assets.group} alt="" />
-                    </Col>
-                  </Row>
-                </Carousel.Item>
-                <Carousel.Item interval={3000}>
-                  <Row className="gx-5">
-                    <Col xs={12} md={6}>
-                      <SwiperHead>Customer Success Story</SwiperHead>
-                      <h3 className="mb-4">
-                        Reimagining Insurance Buying with LLMs
-                      </h3>
-                      <p className="mb-5">
-                        Learn more on how one of our early adopters in the
-                        Insurance sector is leveraging the power of Generative
-                        AI to increase conversion rates through its network of
-                        field sales agents.
-                      </p>
-                      <HeroLink href="#link" $noMarginX>
-                        Read Case Study
-                      </HeroLink>
-                    </Col>
-                    <Col xs={12} md={6} className="text-center">
-                      <img src={assets.group} alt="" />
-                    </Col>
-                  </Row>
-                </Carousel.Item>
-              </HeroCarousel>
-            </Col>
-          </Row>
-        </Container>
+        <CustomCarousel />
       </section>
       <ProductWrapper>
         <Container>
@@ -434,27 +305,7 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-      <section>
-        <Container>
-          <Widget>
-            <Row>
-              <Col xs={12} md={6}>
-                <h2>Schedule a Demo</h2>
-                <p>
-                  Interested in a use case for your business? Want to explore
-                  how to use Generative AI to drive innovation, streamline
-                  operations, and redefine customer experience?
-                </p>
-                <p>Our AI experts are here to listen and provide solutions.</p>
-                <a href="#link">Book a call</a>
-              </Col>
-              <Col xs={12} md={6}>
-                <img src={assets.calender} alt="" />
-              </Col>
-            </Row>
-          </Widget>
-        </Container>
-      </section>
+      <GetStartedCard />
       <section>
         <Container>
           <Row className="align-items-center">
