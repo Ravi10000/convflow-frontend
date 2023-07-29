@@ -43,6 +43,22 @@ export const products = {
             'The ConvFlow train module is simply an orchestrator of training. Our platform has no access to your data, it simply enables different components to talk to each other and manages the training process. The actual training happens on your VPC on your GPUs. '
         }
       ]
+    },
+    features: {
+      title: 'Everything you need to build on top of Open Source LLMs',
+      img: assets.productImg,
+      items: [
+        {
+          title: 'All it needs is a few clicks!',
+          description:
+            'With ConvFlow Train, Supervised Finetuning (SFT) and Reinforcement Learning from Human Feedback (RLHF) for your LLMs are a few clicks away. Use the finetuning methods that popular LLMs like GPT and Falcon use to develop your proprietary LLMs.'
+        },
+        {
+          title: 'We take Data Privacy seriously.',
+          description:
+            'The ConvFlow train module is simply an orchestrator of training. Our platform has no access to your data, it simply enables different components to talk to each other and manages the training process. The actual training happens on your VPC on your GPUs.'
+        }
+      ]
     }
   }
 };

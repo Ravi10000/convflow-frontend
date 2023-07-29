@@ -27,7 +27,7 @@ const HeroLink = styled.a`
 `;
 
 const Product = () => {
-  const [product, setProduct] = useState(products?.['train']);
+  const [product] = useState(products?.['train']);
   return (
     <>
       <section>
@@ -59,6 +59,40 @@ const Product = () => {
                 <p>{item.description}</p>
               </Col>
             ))}
+          </Row>
+        </Container>
+      </section>
+      <section>
+        <Container>
+          <Row>
+            <Col xs={12} className="text-center">
+              <h2>{product.module.title}</h2>
+            </Col>
+            <Col xs={12}>
+              <img src={product.module.img} alt="" />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+      <section>
+        <Container>
+          <Row>
+            <Col xs={12} className="text-center">
+              <h2>{product.module.title}</h2>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} md={6}>
+              {product.features.items.map((item) => (
+                <div className="mb-4">
+                  <h4>{item.title}</h4>
+                  <p>{item.description}</p>
+                </div>
+              ))}
+            </Col>
+            <Col xs={12} md={6}>
+              <img src={product.features.img} alt="" />
+            </Col>
           </Row>
         </Container>
       </section>
