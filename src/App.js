@@ -6,6 +6,7 @@ import Home from 'src/pages/home';
 import IndustryPage from './pages/industry';
 import ProductPage from './pages/product';
 import { Routes, Route } from 'react-router-dom';
+import AboutPage from './pages/about/about';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -65,6 +66,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/industries/:id" element={<IndustryPage />} />
         <Route path="/products/:id" element={<ProductPage />} />
+        <Route path="/about-us" element={<AboutPage />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />

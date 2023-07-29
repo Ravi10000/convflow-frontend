@@ -1,0 +1,78 @@
+.journeryCard {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  max-width: 500px;
+  border-radius: 0.5rem;
+  $border: 2px;
+  color: #fff;
+  background: #000;
+  background-clip: padding-box;
+  border: solid $border transparent;
+  padding: 4rem 2rem;
+  .outline {
+    top: 50%;
+    height: calc(100% + 3rem);
+    transform: translateY(-50%);
+    right: -90px;
+    position: absolute;
+  }
+  &.inRight {
+    .outline {
+      left: -90px;
+      transform: translateY(-50%) rotate(180deg);
+      right: auto;
+    }
+    &:before {
+      content: '';
+      width: 2rem;
+      height: 2rem;
+      background: #5bd2fd;
+      border-radius: 50px;
+      position: absolute;
+      top: 50%;
+      left: calc(-100px - 1rem);
+      z-index: 1;
+      transform: translateY(-50%);
+    }
+  }
+  .description {
+    color: #b4c5cb;
+  }
+  &:before {
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    background: #5bd2fd;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: calc(-100px - 1rem);
+    z-index: 1;
+    transform: translateY(-50%);
+    left: auto;
+    right: calc(-100px - 1rem);
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    // background: linear-gradient(to right, red, orange);
+    background: linear-gradient(130deg, #5bd2fd 0%, #b974fe 100%);
+  }
+}
+
+@media (min-width: 1400px) {
+  .journeryCard {
+    &.inRight {
+      top: 150px;
+    }
+  }
+}

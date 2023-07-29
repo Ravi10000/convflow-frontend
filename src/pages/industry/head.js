@@ -65,7 +65,7 @@ const Title = styled.span`
 
 const Subtitle = styled.p`
   font-weight: 500;
-  max-width: 500px;
+  max-width: 700px;
   line-height: 1.5;
 `;
 const HeroImage = styled.img`
@@ -77,21 +77,29 @@ const HeroImage = styled.img`
   }
 `;
 
-function Head({ title, subtitle, image }) {
+function Head({ title, subtitle, image, aboutTitle, noBtns }) {
   return (
     <HeadContainer>
       <InfoContainer>
         <TitleContainer>
-          <MainTitle>
-            <Title>Generative AI for </Title>
-            {title}
-          </MainTitle>
+          {aboutTitle ? (
+            <MainTitle>
+              <Title>{aboutTitle}</Title>
+            </MainTitle>
+          ) : (
+            <MainTitle>
+              <Title>Generative AI for </Title>
+              {title}
+            </MainTitle>
+          )}
           <Subtitle>{subtitle}</Subtitle>
         </TitleContainer>
-        <ButtonsContainer>
-          <CustomButton>Get started</CustomButton>
-          <CustomButton secondary>Talk to us</CustomButton>
-        </ButtonsContainer>
+        {!noBtns && (
+          <ButtonsContainer>
+            <CustomButton>Get started</CustomButton>
+            <CustomButton secondary>Talk to us</CustomButton>
+          </ButtonsContainer>
+        )}
       </InfoContainer>
       <HeroImage src={image} />
     </HeadContainer>
