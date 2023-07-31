@@ -9,14 +9,7 @@
   position: relative;
   border-radius: 10px;
   margin-bottom: 50px;
-  .bgBlur {
-    top: 0%;
-    left: 0%;
-    transform: translate(-20%, -50%);
-    opacity: 0.6;
-    position: absolute;
-    pointer-events: none;
-  }
+
   .group {
     display: flex;
     flex-direction: column;
@@ -31,13 +24,6 @@
       font-weight: 500;
     }
   }
-  .image {
-    width: 80%;
-    max-width: 300px;
-    height: fit-content;
-    position: relative;
-    z-index: 1;
-  }
 }
 
 @media (min-width: 768px) {
@@ -49,16 +35,6 @@
         font-size: 3rem;
       }
     }
-    .bgBlur {
-      top: 50%;
-      left: 50%;
-      transform: translate(-20%, -60%);
-    }
-    .image {
-      height: 300px;
-      width: fit-content;
-    }
-
     .group {
       align-items: flex-start;
       text-align: start;

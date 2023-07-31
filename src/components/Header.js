@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import { styled } from 'styled-components';
+import { NavLink, Link } from 'react-router-dom';
 
 const NavBarWrapper = styled.div`
   position: relative;
@@ -13,33 +14,70 @@ const NavBarWrapper = styled.div`
 
   & .navbar {
     padding: 0;
-  }
-`;
 
-const NavLink = styled(Nav.Link)`
-  color: #fff;
-  position: relative;
+    .nav-link {
+      color: #fff;
+      position: relative;
+      margin-top: 0.5rem;
 
-  &:hover {
-    color: #fff;
-  }
+      @media (max-width: 992px) {
+        & {
+          padding: 0.5rem 1rem;
+          border-radius: 4px;
+          transition: all 0.3s ease-in-out;
 
-  &::after {
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    border-radius: 16px;
-    content: '';
-    background-color: #fff;
-    opacity: 0;
-    transition: all 200ms linear;
-  }
+          &:hover,
+          &.active {
+            background-color: #fff;
+            color: #000;
+          }
+        }
+      }
 
-  &:hover::after {
-    bottom: 0;
-    opacity: 1;
+      @media (min-width: 992px) {
+        &:not(.dropdown-toggle)::after {
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          border-radius: 16px;
+          content: '';
+          background-color: #fff;
+          opacity: 0;
+          transition: all 200ms linear;
+        }
+
+        &:not(.dropdown-toggle).active::after,
+        &:not(.dropdown-toggle):hover::after {
+          bottom: 0;
+          opacity: 1;
+        }
+      }
+    }
+
+    .dropdown-menu {
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+
+      .dropdown-item {
+        padding: 0.5rem 1rem;
+        transition: all 0.3s ease-in-out;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #000;
+          color: #fff;
+        }
+        &.active {
+          background-color: #000;
+          color: #fff;
+        }
+        &:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
   }
 `;
 
@@ -112,28 +150,61 @@ const Header = () => {
     <>
       <NavBarWrapper>
         <Container>
-          <Navbar expand="md">
-            <NavbarBrand href="#logo">Convflow</NavbarBrand>
+          <Navbar expand="lg">
+            <NavbarBrand href="/">Convflow</NavbarBrand>
             <NavBarToggler aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ms-auto mt-3 mt-md-0">
-                <Nav.Item className="ms-0 ms-md-3">
-                  <NavLink href="#link">Home</NavLink>
+              <Nav className="ms-auto mt-3 mt-lg-0">
+                <Nav.Item className="ms-0 ms-lg-3">
+                  <NavLink className="nav-link" to="/home">
+                    Home
+                  </NavLink>
                 </Nav.Item>
-                <Nav.Item className="ms-0 ms-md-3">
-                  <NavLink href="#link">About us</NavLink>
+                <Nav.Item className="ms-0 ms-lg-3">
+                  <NavLink className="nav-link" to="/about-us">
+                    About us
+                  </NavLink>
                 </Nav.Item>
-                <Nav.Item className="ms-0 ms-md-3">
-                  <NavLink href="#link">Industries</NavLink>
+                <NavDropdown title="Industries" className="ms-0 ms-lg-3">
+                  <NavLink
+                    className="dropdown-item"
+                    to="/industries/financial-services"
+                  >
+                    Financial services
+                  </NavLink>
+                  <NavLink
+                    className="dropdown-item"
+                    to="/industries/management-consulting"
+                  >
+                    Consulting and research
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="/industries/insurance">
+                    Insurance
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="/industries/startups">
+                    Startups
+                  </NavLink>
+                </NavDropdown>
+                <NavDropdown title="Products" className="ms-0 ms-lg-3">
+                  <NavLink className="dropdown-item" to="/products/train">
+                    Train
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="/products/inference">
+                    Inference
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="/products/platform">
+                    Data platform
+                  </NavLink>
+                </NavDropdown>
+                <Nav.Item className="ms-0 ms-lg-3">
+                  <NavLink className="nav-link" to="/use-cases">
+                    Use Cases
+                  </NavLink>
                 </Nav.Item>
-                <Nav.Item className="ms-0 ms-md-3">
-                  <NavLink href="#link">Products</NavLink>
-                </Nav.Item>
-                <Nav.Item className="ms-0 ms-md-3">
-                  <NavLink href="#link">Use Cases</NavLink>
-                </Nav.Item>
-                <Nav.Item className="ms-0 ms-md-3">
-                  <NavLink href="#link">Contact Us</NavLink>
+                <Nav.Item className="ms-0 ms-lg-3">
+                  <NavLink className="nav-link" to="/contact-us">
+                    Contact Us
+                  </NavLink>
                 </Nav.Item>
               </Nav>
             </Navbar.Collapse>

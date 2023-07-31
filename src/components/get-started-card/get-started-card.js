@@ -12,8 +12,11 @@ function GetStartedCard() {
         </p>
         <CustomButton gradient>Get started</CustomButton>
       </div>
-      <img className={styles.image} src="/assets/images/bag.png" alt="" />
-      <img className={styles.bgBlur} src="/assets/images/blur-bg.png" alt="" />
+      <img
+        className={styles.image}
+        src="/assets/images/blur-with-bag.png"
+        alt=""
+      />
     </div>
   );
 }

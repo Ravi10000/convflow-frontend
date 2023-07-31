@@ -209,6 +209,5 @@ export const industries = {
         }
       ]
     }
-  },
-
+  }
 };
