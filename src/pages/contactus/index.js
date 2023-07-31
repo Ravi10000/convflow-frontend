@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { BsArrowRight } from 'react-icons/bs';
+import { sendForm } from 'src/api';
 import { styled } from 'styled-components';
 
 const assets = {
@@ -44,6 +45,20 @@ const FormWrapper = styled.div`
 `;
 
 const Contact = () => {
+  async function handleForm(e) {
+    e.preventDefault();
+    console.log(e);
+    const formData = new FormData(e.target);
+    for (let pair of formData.entries()) {
+      console.log(pair[0] + ', ' + pair[1]);
+    }
+    try {
+      const res = await sendForm(formData);
+      console.log({ res });
+    } catch (err) {
+      console.log(err);
+    }
+  }
   return (
     <>
       <section>
@@ -57,27 +72,48 @@ const Contact = () => {
                 adipiscing elit, sed do eiusmod tempos
               </p>
               <FormWrapper>
-                <Form>
+                <Form onSubmit={handleForm}>
                   <Form.Group className="mb-5">
-                    <Form.Control type="text" placeholder="Your name" />
+                    <Form.Control
+                      type="text"
+                      placeholder="Your name"
+                      name="name"
+                    />
                   </Form.Group>
                   <Form.Group className="mb-5">
-                    <Form.Control type="email" placeholder="Work email" />
+                    <Form.Control
+                      type="email"
+                      placeholder="Work email"
+                      name="email"
+                    />
                   </Form.Group>
                   <Form.Group className="mb-5">
-                    <Form.Control type="text" placeholder="Title" />
+                    <Form.Control
+                      type="text"
+                      placeholder="Title"
+                      name="title"
+                    />
                   </Form.Group>
                   <Form.Group className="mb-5">
-                    <Form.Control type="text" placeholder="Company" />
+                    <Form.Control
+                      type="text"
+                      placeholder="Company"
+                      name="company"
+                    />
                   </Form.Group>
                   <Form.Group className="mb-5">
-                    <Form.Control type="text" placeholder="Usecase" />
+                    <Form.Control
+                      type="text"
+                      placeholder="Usecase"
+                      name="usecase"
+                    />
                   </Form.Group>
                   <Form.Group className="mb-5">
                     <Form.Control
                       as="textarea"
                       rows={4}
                       placeholder="Message"
+                      name="message"
                     />
                   </Form.Group>
                   <Button type="submit">

@@ -4,7 +4,7 @@ import { styled } from 'styled-components';
 import { BsArrowRight } from 'react-icons/bs';
 import CustomCarousel from 'src/components/carousel/carousel';
 import GetStartedCard from 'src/components/get-started-card/get-started-card';
-
+import ContactPage from 'src/pages/contactus';
 const assets = {
   heroImg: 'assets/images/hero-img.png',
   group: 'assets/images/group-icon.png',
@@ -306,7 +306,7 @@ const Home = () => {
         </Container>
       </section>
       <GetStartedCard />
-      <section>
+      {/* <section>
         <Container>
           <Row className="align-items-center">
             <Col xs={12} md={12} lg={8}>
@@ -352,7 +352,8 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
+      <ContactPage />
     </>
   );
 };

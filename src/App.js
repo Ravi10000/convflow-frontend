@@ -9,6 +9,7 @@ import UseCasePage from './pages/case';
 import { Routes, Route } from 'react-router-dom';
 import ContactPage from './pages/contactus';
 import AboutPage from './pages/about/about';
+import api from './api';
 
 const GlobalStyle = createGlobalStyle`
   :root {
