@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { styled } from 'styled-components';
+import { Link } from 'react-router-dom';
 import {
   FaDribbble,
   FaFacebook,
@@ -132,13 +133,13 @@ const Footer = () => {
                   </p>
                 </li>
                 <li style={{ color: '#999999' }}>
-                  <a href="#link">Buy Product</a>
+                  <Link to="#link">Buy Product</Link>
                 </li>
                 <li style={{ color: '#999999' }}>
-                  <a href="#link">Sell Product</a>
+                  <Link to="#link">Sell Product</Link>
                 </li>
                 <li style={{ color: '#999999' }}>
-                  <a href="#link">Our Creator</a>
+                  <Link to="#link">Our Creator</Link>
                 </li>
               </ul>
             </Col>
@@ -154,13 +155,13 @@ const Footer = () => {
                   Resources
                 </p>
                 <li style={{ color: '#999999' }}>
-                  <a href="#link">About Us</a>
+                  <Link to="/about-us">About Us</Link>
                 </li>
                 <li style={{ color: '#999999' }}>
-                  <a href="#link">Event</a>
+                  <Link to="#link">Event</Link>
                 </li>
                 <li style={{ color: '#999999' }}>
-                  <a href="#link">Tutorial</a>
+                  <Link to="#link">Tutorial</Link>
                 </li>
               </ul>
             </Col>
@@ -179,19 +180,19 @@ const Footer = () => {
                   className="d-flex align-items-center"
                   style={{ color: '#999999' }}
                 >
-                  <a href="#link">Media</a>
+                  <Link to="#link">Media</Link>
                 </li>
                 <li
                   className="d-flex align-items-center"
                   style={{ color: '#999999' }}
                 >
-                  <a href="#link">Blog</a>
+                  <Link to="#link">Blog</Link>
                 </li>
                 <li
                   className="d-flex align-items-center"
                   style={{ color: '#999999' }}
                 >
-                  <a href="#link">Pricing</a>
+                  <Link to="#link">Pricing</Link>
                 </li>
               </ul>
             </Col>
@@ -210,19 +211,19 @@ const Footer = () => {
                   className="d-flex align-items-center"
                   style={{ color: '#999999' }}
                 >
-                  <a href="#link">Terms</a>
+                  <Link to="#link">Terms</Link>
                 </li>
                 <li
                   className="d-flex align-items-center"
                   style={{ color: '#999999' }}
                 >
-                  <a href="#link">Privacy</a>
+                  <Link to="#link">Privacy</Link>
                 </li>
                 <li
                   className="d-flex align-items-center"
                   style={{ color: '#999999' }}
                 >
-                  <a href="#link">Support</a>
+                  <Link to="#link">Support</Link>
                 </li>
               </ul>
             </Col>
