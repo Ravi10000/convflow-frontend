@@ -1,10 +1,13 @@
 const assets = {
   convflow: '/assets/images/convflow.png',
-  productImg: '/assets/images/form-img.png'
+  defaultImg: '/assets/images/form-img.png',
+  trainImg: '/assets/images/train.png',
+  inferenceImg: '/assets/images/inference.png',
+  dataPlatformImg: '/assets/images/data-platform.png'
 };
 export const products = {
   train: {
-    image: assets.productImg,
+    image: assets.defaultImg,
     title: {
       highlightText: 'The Easiest Way to Train',
       normalText: 'and Finetune ',
@@ -37,14 +40,14 @@ export const products = {
         normalText: 'LLM Finetuning Made 10x Easier with our',
         highlightText: 'Training Module'
       },
-      img: assets.convflow
+      img: assets.trainImg
     },
     features: {
       title: {
         normalText: 'Everything you need to build on top of',
         highlightText: 'Open Source LLMs'
       },
-      img: assets.productImg,
+      img: assets.trainImg,
       items: [
         {
           title: 'All it needs is a few clicks!',
@@ -60,7 +63,7 @@ export const products = {
     }
   },
   inference: {
-    image: assets.productImg,
+    image: assets.defaultImg,
     title: {
       highlightText: 'The Fastest Way to Build LLM Applications',
       normalText: 'for Enterprises.'
@@ -92,14 +95,14 @@ export const products = {
         normalText: 'Building LLM Apps Made 10x Faster with our',
         highlightText: 'Inference Module'
       },
-      img: assets.convflow
+      img: assets.inferenceImg
     },
     features: {
       title: {
         normalText: 'Everything you need to build and deploy your',
         highlightText: 'LLM Application'
       },
-      img: assets.productImg,
+      img: assets.trainImg,
       items: [
         {
           title: 'Drag and drop. No code.',
@@ -115,7 +118,7 @@ export const products = {
     }
   },
   platform: {
-    image: assets.productImg,
+    image: assets.defaultImg,
     title: {
       highlightText: 'The Most Secure Way to Manage',
       normalText: 'Your Data.'
@@ -147,14 +150,14 @@ export const products = {
         normalText: 'Data Governance Made 10x Simpler with our',
         highlightText: 'Data Module'
       },
-      img: assets.convflow
+      img: assets.dataPlatformImg
     },
     features: {
       title: {
         normalText: 'Everything you need to manage data for your',
         highlightText: 'LLM Application'
       },
-      img: assets.productImg,
+      img: assets.trainImg,
       items: [
         {
           title: 'From labeling to monitoring.',

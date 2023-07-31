@@ -10,7 +10,10 @@ import {
 } from 'react-icons/fa';
 
 const Logo = styled.a`
-  display: block;
+  color: #fff;
+  display: flex;
+  gap: 10px;
+  align-items: center;
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -49,13 +52,13 @@ const IconList = styled.ul`
 
 const FooterExtra = styled.div`
   background-color: var(--color-primary);
-  border-top: 1px solid var(--color-text);
+  border-top: 1px solid #98a2b3;
   text-align: center;
   padding: 1rem 0;
 
   p {
     margin: 0;
-    color: #fff;
+    color: #98a2b3;
   }
 `;
 
@@ -76,10 +79,13 @@ const Footer = () => {
   return (
     <>
       <StyledFooter>
-        <Container>
+        <Container style={{ color: '#999999' }}>
           <Row className="gx-3 gy-3">
             <Col xs={12} md={12} lg={4}>
-              <Logo href="#home">Convflow</Logo>
+              <Logo href="#home">
+                <img src="/assets/images/convflow-logo.svg" alt="" />
+                <h2>ConvFlow</h2>
+              </Logo>
               <p>
                 This growth plan will help you reach your resolutions and
                 achieve the goals you have been striving towards.
@@ -87,27 +93,27 @@ const Footer = () => {
               <IconList>
                 <li className="icon-item">
                   <a href="#link">
-                    <FaTwitter />
+                    <FaTwitter style={{ color: '#98A2B3' }} />
                   </a>
                 </li>
                 <li className="icon-item">
                   <a href="#link">
-                    <FaLinkedin />
+                    <FaLinkedin style={{ color: '#98A2B3' }} />
                   </a>
                 </li>
                 <li className="icon-item">
                   <a href="#link">
-                    <FaFacebook />
+                    <FaFacebook style={{ color: '#98A2B3' }} />
                   </a>
                 </li>
                 <li className="icon-item">
                   <a href="#link">
-                    <FaGithub />
+                    <FaGithub style={{ color: '#98A2B3' }} />
                   </a>
                 </li>
                 <li className="icon-item">
                   <a href="#link">
-                    <FaDribbble />
+                    <FaDribbble style={{ color: '#98A2B3' }} />
                   </a>
                 </li>
               </IconList>
@@ -115,51 +121,107 @@ const Footer = () => {
             <Col xs={6} md={6} lg={2}>
               <ul>
                 <li>
+                  <p
+                    style={{
+                      fontWeight: 600,
+                      marginBottom: '10px',
+                      color: '#fff'
+                    }}
+                  >
+                    MarketPlace
+                  </p>
+                </li>
+                <li style={{ color: '#999999' }}>
                   <a href="#link">Buy Product</a>
                 </li>
-                <li>
+                <li style={{ color: '#999999' }}>
                   <a href="#link">Sell Product</a>
                 </li>
-                <li>
+                <li style={{ color: '#999999' }}>
                   <a href="#link">Our Creator</a>
                 </li>
               </ul>
             </Col>
             <Col xs={6} md={6} lg={2}>
               <ul>
-                <li>
+                <p
+                  style={{
+                    fontWeight: 600,
+                    marginBottom: '10px',
+                    color: '#fff'
+                  }}
+                >
+                  Resources
+                </p>
+                <li style={{ color: '#999999' }}>
                   <a href="#link">About Us</a>
                 </li>
-                <li>
+                <li style={{ color: '#999999' }}>
                   <a href="#link">Event</a>
                 </li>
-                <li>
+                <li style={{ color: '#999999' }}>
                   <a href="#link">Tutorial</a>
                 </li>
               </ul>
             </Col>
             <Col xs={6} md={6} lg={2}>
               <ul>
-                <li className="d-flex align-items-center">
+                <p
+                  style={{
+                    fontWeight: 600,
+                    marginBottom: '10px',
+                    color: '#fff'
+                  }}
+                >
+                  Company
+                </p>
+                <li
+                  className="d-flex align-items-center"
+                  style={{ color: '#999999' }}
+                >
                   <a href="#link">Media</a>
                 </li>
-                <li className="d-flex align-items-center">
+                <li
+                  className="d-flex align-items-center"
+                  style={{ color: '#999999' }}
+                >
                   <a href="#link">Blog</a>
                 </li>
-                <li className="d-flex align-items-center">
+                <li
+                  className="d-flex align-items-center"
+                  style={{ color: '#999999' }}
+                >
                   <a href="#link">Pricing</a>
                 </li>
               </ul>
             </Col>
             <Col xs={6} md={6} lg={2}>
               <ul>
-                <li className="d-flex align-items-center">
+                <p
+                  style={{
+                    fontWeight: 600,
+                    marginBottom: '10px',
+                    color: '#fff'
+                  }}
+                >
+                  Legal
+                </p>
+                <li
+                  className="d-flex align-items-center"
+                  style={{ color: '#999999' }}
+                >
                   <a href="#link">Terms</a>
                 </li>
-                <li className="d-flex align-items-center">
+                <li
+                  className="d-flex align-items-center"
+                  style={{ color: '#999999' }}
+                >
                   <a href="#link">Privacy</a>
                 </li>
-                <li className="d-flex align-items-center">
+                <li
+                  className="d-flex align-items-center"
+                  style={{ color: '#999999' }}
+                >
                   <a href="#link">Support</a>
                 </li>
               </ul>

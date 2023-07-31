@@ -82,6 +82,7 @@ const NavBarWrapper = styled.div`
 `;
 
 const NavbarBrand = styled(Navbar.Brand)`
+  font-weight: 600;
   &,
   &:hover {
     color: inherit;
@@ -151,7 +152,10 @@ const Header = () => {
       <NavBarWrapper>
         <Container>
           <Navbar expand="lg">
-            <NavbarBrand href="/">Convflow</NavbarBrand>
+            <NavbarBrand href="/">
+              <img src="/assets/images/convflow-logo.svg" alt="" />
+              ConvFlow
+            </NavbarBrand>
             <NavBarToggler aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto mt-3 mt-lg-0">

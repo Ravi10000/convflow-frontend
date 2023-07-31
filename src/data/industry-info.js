@@ -6,6 +6,7 @@ const assets = {
   interface: '/assets/images/interface.png',
   cloud: '/assets/images/cloud.png',
   robo: '/assets/images/robo.png',
+  benefits: '/assets/images/benefits.png',
   services: '/assets/images/services.png'
 };
 export const industries = {
@@ -31,7 +32,7 @@ export const industries = {
       }
     ],
     benefits: {
-      image: assets.robo,
+      image: assets.benefits,
       title: 'The Easiest Way to Build and Scale Generative AI Applications.',
       subtitle:
         'ConvFlow makes it super easy to train, deploy and operationalize LLMs for custom GenAI applications.',
