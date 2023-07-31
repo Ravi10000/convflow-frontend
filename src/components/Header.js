@@ -210,6 +210,14 @@ const Header = () => {
                     Contact Us
                   </NavLink>
                 </Nav.Item>
+                <Nav.Item>
+                  <NavLink
+                    className="nav-link text-black bg-white mx-4 px-4 text-center fw-semibold"
+                    to="/"
+                  >
+                    Sign In
+                  </NavLink>
+                </Nav.Item>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
