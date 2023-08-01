@@ -1,6 +1,6 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
 import { styled } from 'styled-components';
+import { Col, Container, Row } from 'react-bootstrap';
 import { BsArrowRight } from 'react-icons/bs';
 // import CustomCarousel from 'src/components/carousel/carousel';
 import GetStartedCard from 'src/components/get-started-card/get-started-card';

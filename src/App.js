@@ -62,7 +62,7 @@ const GlobalStyle = createGlobalStyle`
 
 const App = () => {
   return (
-    <>
+    <div className="App">
       <GlobalStyle />
       <Header />
       <Routes>
@@ -75,7 +75,7 @@ const App = () => {
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 };
 
