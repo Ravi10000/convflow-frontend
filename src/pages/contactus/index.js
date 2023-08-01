@@ -43,6 +43,25 @@ const FormWrapper = styled.div`
     }
   }
 `;
+const Heading = styled.h2`
+  width: fit-content;
+  background: linear-gradient(
+    90deg,
+    #ff3bff 0%,
+    #ecbfbf 38.02%,
+    #5c24ff 75.83%,
+    #d94fd5 100%
+  );
+  font-weight: 600;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
+const Description = styled.p`
+  font-size: 1.2rem;
+  font-weight: 300;
+  max-width: 700px;
+`;
 
 const Contact = () => {
   async function handleForm(e) {
@@ -65,12 +84,15 @@ const Contact = () => {
         <Container>
           <Row className="align-items-center">
             <Col xs={12} md={12} lg={8}>
-              <h1>Let's talk</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempos Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempos
-              </p>
+              <Heading>Let's talk</Heading>
+              <Description>
+                Interested in a use case for your business? Want to explore how
+                to use Generative AI to drive innovation, streamline operations,
+                and redefine customer experience?
+                <br />
+                <br />
+                Our AI experts are here to listen and provide solutions.
+              </Description>
               <FormWrapper>
                 <Form onSubmit={handleForm}>
                   <Form.Group className="mb-5">

@@ -13,10 +13,16 @@
       font-weight: 600;
       font-size: 1.2rem;
     }
+    .description {
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
   }
   .image {
     width: 100%;
+    max-width: 400px;
     height: fit-content;
+    max-height: 350px;
   }
 }
 

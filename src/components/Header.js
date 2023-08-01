@@ -10,7 +10,7 @@ const NavBarWrapper = styled.div`
   padding: 20px 0;
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
-  background-color: #000;
+  /* background-color: #000; */
 
   & .navbar {
     padding: 0;

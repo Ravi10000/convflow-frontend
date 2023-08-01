@@ -4,6 +4,7 @@ import { styled } from 'styled-components';
 import { products } from 'src/data/product-info';
 import GetStartedCard from 'src/components/get-started-card/get-started-card';
 import { useNavigate, useParams } from 'react-router-dom';
+import CustomButton from 'src/components/custom-button/custom-button';
 
 const HeroLink = styled.a`
   padding: 1rem 2rem;
@@ -65,8 +66,13 @@ const Product = () => {
                 )}
               </MainHead>
               <p className="mb-5">{product.subtitle}</p>
-              <HeroLink href="#link">Get started</HeroLink>
-              <HeroLink href="#link">Talk to us</HeroLink>
+              <CustomButton onClick={() => navigate('/contact-us')}>
+                Get started
+              </CustomButton>
+              <span className="m-2"></span>
+              <CustomButton secondary onClick={() => navigate('/contact-us')}>
+                Talk to us
+              </CustomButton>
             </Col>
             <Col xs={12} md={6}>
               <img src={product.image} alt="" />
@@ -130,8 +136,13 @@ const Product = () => {
                   <p>{item.description}</p>
                 </div>
               ))}
-              <HeroLink href="#link">Get started</HeroLink>
-              <HeroLink href="#link">Talk to us</HeroLink>
+              <CustomButton onClick={() => navigate('/contact-us')}>
+                Get started
+              </CustomButton>
+              <span className="m-2"></span>
+              <CustomButton secondary onClick={() => navigate('/contact-us')}>
+                Talk to us
+              </CustomButton>
             </Col>
             <Col xs={12} md={6}>
               <img src={product.features.img} alt="" />

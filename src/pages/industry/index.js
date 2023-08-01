@@ -7,6 +7,7 @@ import FeatureCard from './feature-card/feature-card';
 import CustomButton from 'src/components/custom-button/custom-button';
 import CustomCarousel from 'src/components/carousel/carousel';
 import GetStartedCard from 'src/components/get-started-card/get-started-card';
+import SuccessStory from 'src/components/success-story/success-story';
 
 function IndustryPage() {
   const { id } = useParams();
@@ -14,6 +15,7 @@ function IndustryPage() {
   const [industry, setIndustry] = useState(
     industries?.[id] || industries?.['financial-services']
   );
+  console.log({ industry });
 
   useEffect(() => {
     if (!industries.hasOwnProperty(id)) {
@@ -28,7 +30,7 @@ function IndustryPage() {
         subtitle={industry?.subtitle}
         image={industry?.image}
       />
-      <CustomCarousel />
+      <SuccessStory story={industry?.story} />
       <div className={styles.featuresContainer}>
         {industry?.features.map((feature, index) => (
           <FeatureCard
@@ -53,8 +55,13 @@ function IndustryPage() {
             ))}
           </div>
           <div className={styles.buttonsContainer}>
-            <CustomButton>Get started</CustomButton>
-            <CustomButton secondary>Talk to us</CustomButton>
+            <CustomButton onClick={() => navigate('/contact-us')}>
+              Get started
+            </CustomButton>
+            <span className="m-2"></span>
+            <CustomButton secondary onClick={() => navigate('/contact-us')}>
+              Talk to us
+            </CustomButton>
           </div>
         </div>
         <img

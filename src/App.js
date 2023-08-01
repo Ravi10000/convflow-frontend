@@ -13,7 +13,7 @@ import api from './api';
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --primary-font: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --primary-font: "ClashGrotesk-Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     --secondary-font: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     --color-text: #ffffff;
     --primary-linear-gradient: linear-gradient(90deg, #FF3BFF 0%, #ECBFBF 40%, #5C24FF 75%, #D94FD5 100%);

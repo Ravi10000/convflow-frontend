@@ -4,5 +4,25 @@
   },
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
-  }
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#ff6ee1",
+    "activityBar.background": "#ff6ee1",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#caff00",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#15202b99",
+    "sash.hoverBorder": "#ff6ee1",
+    "statusBar.background": "#ff3bd6",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#ff08cb",
+    "statusBarItem.remoteBackground": "#ff3bd6",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#ff3bd6",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#ff3bd699",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#ff3bd6"
 }

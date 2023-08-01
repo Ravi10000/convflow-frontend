@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { industries } from 'src/data/industry-info.js';
 import CustomButton from 'src/components/custom-button/custom-button';
+import { useNavigate } from 'react-router-dom';
 
 const HeadContainer = styled.div`
   display: flex;
@@ -19,7 +20,6 @@ const InfoContainer = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-
   gap: 2rem;
 
   @media (min-width: 1000px) {
@@ -42,7 +42,7 @@ const TitleContainer = styled.div`
 
 const MainTitle = styled.h1`
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 2.5rem;
 `;
 const ButtonsContainer = styled.div`
@@ -57,15 +57,16 @@ const Title = styled.span`
     #5c24ff 75.83%,
     #d94fd5 100%
   );
-  font-weight: 700;
+  font-weight: 600;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
 
 const Subtitle = styled.p`
-  font-weight: 500;
-  max-width: 700px;
+  font-weight: 300;
+  font-size: 1.2rem;
+  max-width: 500px;
   line-height: 1.5;
 `;
 const HeroImage = styled.img`
@@ -78,6 +79,7 @@ const HeroImage = styled.img`
 `;
 
 function Head({ title, subtitle, image, aboutTitle, noBtns }) {
+  const navigate = useNavigate();
   return (
     <HeadContainer>
       <InfoContainer>
@@ -96,8 +98,12 @@ function Head({ title, subtitle, image, aboutTitle, noBtns }) {
         </TitleContainer>
         {!noBtns && (
           <ButtonsContainer>
-            <CustomButton>Get started</CustomButton>
-            <CustomButton secondary>Talk to us</CustomButton>
+            <CustomButton onClick={() => navigate('/contact-us')}>
+              Get started
+            </CustomButton>
+            <CustomButton secondary onClick={() => navigate('/contact-us')}>
+              Talk to us
+            </CustomButton>
           </ButtonsContainer>
         )}
       </InfoContainer>

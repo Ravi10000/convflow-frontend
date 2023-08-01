@@ -5,26 +5,81 @@ import { BsArrowRight } from 'react-icons/bs';
 import CustomCarousel from 'src/components/carousel/carousel';
 import GetStartedCard from 'src/components/get-started-card/get-started-card';
 import ContactPage from 'src/pages/contactus';
+import CustomButton from 'src/components/custom-button/custom-button';
+import SuccessStory from 'src/components/success-story/success-story';
+import { Link, useNavigate } from 'react-router-dom';
+import Products from 'src/components/products/products';
 const assets = {
-  heroImg: 'assets/images/hero-img.png',
+  // heroImg: 'assets/images/hero-img.png',
+  // heroImg: 'assets/images/hero.svg',
+  heroImg: 'assets/images/hero-new.svg',
+  heroBg: 'assets/images/hero-bg.svg',
   group: 'assets/images/group-icon.png',
   bgImg: 'assets/images/bg-img.png',
-  train: 'assets/images/train.png',
-  interface: 'assets/images/interface.png',
-  cloud: 'assets/images/cloud.png',
+  // train: 'assets/images/train.png',
+  train: 'assets/images/train.svg',
+  // interface: 'assets/images/interface.png',
+  inference: 'assets/images/inference.svg',
+  // cloud: 'assets/images/cloud.png',
+  cloud: 'assets/images/cloud.svg',
+  deployment: 'assets/images/deployment.svg',
+  data: 'assets/images/data.svg',
+  test: 'assets/images/test.svg',
   model: 'assets/images/model.png',
   testing: 'assets/images/testing.png',
   group1: 'assets/images/group-icon-1.png',
   calender: 'assets/images/calender.png',
   formImg: 'assets/images/form-img.png'
 };
+const successStory = {
+  title: 'Reimagining Insurance Buying with LLMs',
+  description:
+    'Learn more on how one of our early adopters in the Insurance sector is leveraging the power of Generative AI to increase conversion rates through its network of field sales agents.'
+};
 
+const HeroImg = styled.img`
+  margin-top: 5rem;
+  max-width: 500px;
+  max-height: 500px;
+`;
+
+const HeroSection = styled.section`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* position: relative; */
+`;
+
+const Background = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
+  object-fit: cover;
+`;
+const TitleContainer = styled.div`
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  gap: 10px;
+  letter-spacing: 1px;
+`;
 const MainTitle = styled.h1`
   background: var(--primary-linear-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 600;
-  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 5rem;
+`;
+const Subtitle = styled.p`
+  max-width: 750px;
+  font-weight: 300;
 `;
 
 const HeroLink = styled.a`
@@ -51,7 +106,8 @@ const HeroLink = styled.a`
 `;
 
 const Heading = styled.h2`
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 3rem;
   margin-bottom: 3rem;
   line-height: 1.5;
 `;
@@ -165,26 +221,40 @@ const FormWrapper = styled.div`
 `;
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <>
       <section>
-        <Container>
-          <Row>
-            <Col xs={12} className="text-center">
-              <MainTitle>Private ChatGPT for Your Enteprise.</MainTitle>
-              <p className="mb-5">
-                Easily train, deploy, and operationalize LLMs on your data, in
-                your secure environment. Go from GenAI mandate to GenAI adoption
-                within weeks!
-              </p>
-              <HeroLink href="#link">Get started</HeroLink>
-              <HeroLink href="#link">Talk to us</HeroLink>
-            </Col>
-          </Row>
-        </Container>
-        <img src={assets.heroImg} alt="" />
-        <CustomCarousel />
-      </section>
+        <HeroSection>
+          <Background src={assets.heroBg} />
+          <Container>
+            <Row>
+              <TitleContainer xs={12} className="text-center">
+                <MainTitle>Private ChatGPT for Your Enteprise.</MainTitle>
+                <Subtitle>
+                  Easily train, deploy, and operationalize LLMs on your data, in
+                  your secure environment. Go from GenAI mandate to GenAI
+                  adoption within weeks!
+                </Subtitle>
+                <div>
+                  <CustomButton onClick={() => navigate('/contact-us')}>
+                    Get Started
+                  </CustomButton>
+                  <span className="m-2"></span>
+                  <CustomButton
+                    secondary
+                    onClick={() => navigate('/contact-us')}
+                  >
+                    Talk to us
+                  </CustomButton>
+                </div>
+              </TitleContainer>
+            </Row>
+          </Container>
+          <HeroImg src={assets.heroImg} alt="" />
+        </HeroSection>
+        <SuccessStory story={successStory} />
+        {/* </section>
       <ProductWrapper>
         <Container>
           <Row>
@@ -207,10 +277,10 @@ const Home = () => {
           </Row>
           <Row className="justify-content-center mb-5">
             <Col xs={12} md={4} className="text-center">
-              <img src={assets.interface} alt="" />
+              <img src={assets.inference} alt="" />
             </Col>
             <Col xs={12} md={4}>
-              <h3>Interface</h3>
+              <h3>Inference</h3>
               <p>
                 Building LLM powered applications was never easier. ConvFlow's
                 low-code platform to make productionizing LLMs a breeze. Go from
@@ -233,16 +303,18 @@ const Home = () => {
           </Row>
           <Row>
             <Col xs={12} className="text-center">
-              <a href="#link">Talk to Us</a>
+              <Link to="/contact-us">Talk to Us</Link>
             </Col>
           </Row>
         </Container>
       </ProductWrapper>
-      <section>
+      <section> */}
+        <Products />
         <Row>
           <Col xs={12} className="text-center">
             <Heading>
-              Building proprietary Generative AI applications was never easier.
+              Building proprietary Generative AI
+              <br /> applications was never easier.
             </Heading>
           </Col>
         </Row>
@@ -263,12 +335,12 @@ const Home = () => {
               </a>
             </Col>
             <Col xs={12} md={6} lg={5} className="order-1 order-md-2">
-              <img src={assets.model} alt="" />
+              <img src={assets.deployment} alt="" />
             </Col>
           </Row>
           <Row className="justify-content-around mb-4">
             <Col xs={12} md={6} lg={5}>
-              <img src={assets.model} alt="" />
+              <img src={assets.data} alt="" />
             </Col>
             <Col xs={12} md={6} lg={5}>
               <HighLightText>
@@ -300,59 +372,12 @@ const Home = () => {
               </a>
             </Col>
             <Col xs={12} md={6} lg={5} className="order-1 order-md-2">
-              <img src={assets.testing} alt="" />
+              <img src={assets.test} alt="" />
             </Col>
           </Row>
         </Container>
       </section>
       <GetStartedCard />
-      {/* <section>
-        <Container>
-          <Row className="align-items-center">
-            <Col xs={12} md={12} lg={8}>
-              <h1>Let's talk</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempos Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempos
-              </p>
-              <FormWrapper>
-                <Form>
-                  <Form.Group className="mb-5">
-                    <Form.Control type="text" placeholder="Your name" />
-                  </Form.Group>
-                  <Form.Group className="mb-5">
-                    <Form.Control type="email" placeholder="Work email" />
-                  </Form.Group>
-                  <Form.Group className="mb-5">
-                    <Form.Control type="text" placeholder="Title" />
-                  </Form.Group>
-                  <Form.Group className="mb-5">
-                    <Form.Control type="text" placeholder="Company" />
-                  </Form.Group>
-                  <Form.Group className="mb-5">
-                    <Form.Control type="text" placeholder="Usecase" />
-                  </Form.Group>
-                  <Form.Group className="mb-5">
-                    <Form.Control
-                      as="textarea"
-                      rows={4}
-                      placeholder="Message"
-                    />
-                  </Form.Group>
-                  <Button type="submit">
-                    Send
-                    <BsArrowRight />
-                  </Button>
-                </Form>
-              </FormWrapper>
-            </Col>
-            <Col xs={12} md={12} lg={4}>
-              <img src={assets.formImg} alt="" />
-            </Col>
-          </Row>
-        </Container>
-      </section> */}
       <ContactPage />
     </>
   );

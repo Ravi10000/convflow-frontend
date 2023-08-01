@@ -6,7 +6,7 @@ const about = {
   image: '/assets/images/services.png',
   title: 'About Us',
   subtitle:
-    "A Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's  standard dummy text ever since the 1500s, when an unknown printing and typesetting industry. Lorem Ipsum has been the industry's    standard dummy text ever since the 1500s, when an unknown A Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's  standard dummy text ever since the 1500s, when an unknown printing and typesetting industry. Lorem Ipsum has been the industry's  standard dummy text ever since the 1500s, when an unknown"
+    'Since our inception, we have been pioneers in applying AI to address real-world challenges. Our unwavering dedication to providing scalable solutions has led us to deliver substantial value to our clients, leaving a lasting impact in diverse industries such as Finance, Sales, Real Estate, Sports, Marketing, and more. Along this journey, we have accumulated invaluable experience through both failures and successes. XYZ represents the culmination of our efforts to democratize AI adoption, making it accessible to all. As we enter the era of generative AI, we are committed to ensuring that no one is left behind. Our goal is to harness the power of AI for the collective advancement of society, reaping its benefits together.'
 };
 
 function AboutPage() {
