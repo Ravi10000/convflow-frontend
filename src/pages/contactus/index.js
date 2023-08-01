@@ -1,9 +1,16 @@
 import React from 'react';
+import styles from './contact-us.module.scss';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { BsArrowRight } from 'react-icons/bs';
 import { sendForm } from 'src/api';
 import { styled } from 'styled-components';
-
+import CustomInput from 'src/components/custom-input/custom-input';
+import { RiUser4Line } from 'react-icons/ri';
+import { MdAlternateEmail } from 'react-icons/md';
+import { BsPhone, BsSignpost } from 'react-icons/bs';
+import { HiOutlineOfficeBuilding } from 'react-icons/hi';
+import { BiMessageSquareDetail } from 'react-icons/bi';
+import CustomTextarea from 'src/components/custom-textarea/custom-textarea';
 // const assets = {
 //   formImg: 'assets/images/form-img.png'
 // };
@@ -64,7 +71,7 @@ const Description = styled.p`
 `;
 
 const Contact = () => {
-  async function handleForm(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     console.log(e);
     const formData = new FormData(e.target);
@@ -74,14 +81,70 @@ const Contact = () => {
     try {
       const res = await sendForm(formData);
       console.log({ res });
+      e.target.reset();
     } catch (err) {
       console.log(err);
     }
   }
   return (
     <>
-      <section>
-        <Container>
+      <section className={styles.contactUs}>
+        <Heading>Let's talk</Heading>
+        <Description>
+          Interested in a use case for your business? Want to explore how to use
+          Generative AI to drive innovation, streamline operations, and redefine
+          customer experience?
+          <br />
+          <br />
+          Our AI experts are here to listen and provide solutions.
+        </Description>
+        <form onSubmit={handleSubmit}>
+          <div className={styles.inputGroup}>
+            <CustomInput
+              Icon={RiUser4Line}
+              placeholder="your name"
+              name="name"
+            />
+            <CustomInput
+              Icon={MdAlternateEmail}
+              placeholder="work email"
+              name="email"
+              type="email"
+            />
+            <CustomInput
+              Icon={BsPhone}
+              placeholder="phone number"
+              name="phone"
+              maxLength="10"
+              inputMode="numeric"
+              onInput={(e) => {
+                e.target.value = e.target.value.replace(/[^0-9]/g, '');
+              }}
+            />
+            <CustomInput
+              Icon={HiOutlineOfficeBuilding}
+              placeholder="company"
+              name="company"
+            />
+            <CustomInput
+              Icon={BsSignpost}
+              placeholder="regarding"
+              name="regarding"
+            />
+          </div>
+          <div className={styles.inputGroup}>
+            <CustomTextarea
+              Icon={BiMessageSquareDetail}
+              placeholder="message"
+              name="message"
+            />
+            <Button type="submit">
+              Send
+              <BsArrowRight />
+            </Button>
+          </div>
+        </form>
+        {/* <Container>
           <Row className="align-items-center">
             <Col xs={12} md={12} lg={8}>
               <Heading>Let's talk</Heading>
@@ -146,10 +209,10 @@ const Contact = () => {
               </FormWrapper>
             </Col>
             <Col xs={12} md={12} lg={4}>
-              {/* <img src={assets.formImg} alt="" /> */}
+              <img src={assets.formImg} alt="" />
             </Col>
           </Row>
-        </Container>
+        </Container> */}
       </section>
     </>
   );

@@ -1,0 +1,24 @@
+.inputContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  .icon {
+    height: 2rem;
+    width: fit-content;
+  }
+  input {
+    border: none;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: transparent;
+    font-size: 1.5rem;
+    &:focus {
+      outline: transparent;
+    }
+    &::placeholder {
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+  }
+}
