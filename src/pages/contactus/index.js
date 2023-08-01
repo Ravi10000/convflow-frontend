@@ -4,9 +4,9 @@ import { BsArrowRight } from 'react-icons/bs';
 import { sendForm } from 'src/api';
 import { styled } from 'styled-components';
 
-const assets = {
-  formImg: 'assets/images/form-img.png'
-};
+// const assets = {
+//   formImg: 'assets/images/form-img.png'
+// };
 
 const FormWrapper = styled.div`
   margin-top: 2rem;
