@@ -7,7 +7,7 @@ const assets = {
 };
 export const products = {
   train: {
-    image: assets.defaultImg,
+    // image: assets.defaultImg,
     title: {
       highlightText: 'The Easiest Way to Train',
       normalText: 'and Finetune ',
@@ -63,7 +63,7 @@ export const products = {
     }
   },
   inference: {
-    image: assets.defaultImg,
+    // image: assets.defaultImg,
     title: {
       highlightText: 'The Fastest Way to Build LLM Applications',
       normalText: 'for Enterprises.'
@@ -118,7 +118,7 @@ export const products = {
     }
   },
   platform: {
-    image: assets.defaultImg,
+    // image: assets.defaultImg,
     title: {
       highlightText: 'The Most Secure Way to Manage',
       normalText: 'Your Data.'

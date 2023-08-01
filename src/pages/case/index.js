@@ -3,7 +3,11 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { styled } from 'styled-components';
 
 const assets = {
-  productImg: '/assets/images/form-img.png'
+  productImg: '/assets/images/form-img.png',
+  useCase: '/assets/images/useCase.svg',
+  inteligence: '/assets/images/inteligence.svg',
+  searchEngine: '/assets/images/searchEngine.svg',
+  support: '/assets/images/support.svg'
 };
 
 const MainHead = styled.h1`
@@ -62,7 +66,7 @@ const UseCases = () => {
               <HeroLink href="#link">Talk to us</HeroLink>
             </Col>
             <Col xs={12} md={6}>
-              <img src={assets.productImg} alt="" />
+              <img src={assets.useCase} alt="" />
             </Col>
           </Row>
         </Container>
@@ -92,12 +96,12 @@ const UseCases = () => {
               </HeroLink>
             </Col>
             <Col xs={12} md={6}>
-              <img src={assets.productImg} alt="" />
+              <img src={assets.support} alt="" />
             </Col>
           </Row>
           <Row className="mb-5">
             <Col xs={12} md={6}>
-              <img src={assets.productImg} alt="" />
+              <img src={assets.inteligence} alt="" />
             </Col>
             <Col xs={12} md={6}>
               <h3>Document Intelligence</h3>
@@ -134,7 +138,7 @@ const UseCases = () => {
               </HeroLink>
             </Col>
             <Col xs={12} md={6}>
-              <img src={assets.productImg} alt="" />
+              <img src={assets.searchEngine} alt="" />
             </Col>
           </Row>
         </Container>

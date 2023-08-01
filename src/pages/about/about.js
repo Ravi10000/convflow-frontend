@@ -16,9 +16,9 @@ function AboutPage() {
         noBtns
         aboutTitle={about?.title}
         subtitle={about?.subtitle}
-        image={about.image}
+        // image={about.image}
       />
-      <Journery />
+      {/* <Journery /> */}
       <TeamGroup />
     </div>
   );

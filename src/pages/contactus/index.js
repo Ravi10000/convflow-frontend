@@ -146,7 +146,7 @@ const Contact = () => {
               </FormWrapper>
             </Col>
             <Col xs={12} md={12} lg={4}>
-              <img src={assets.formImg} alt="" />
+              {/* <img src={assets.formImg} alt="" /> */}
             </Col>
           </Row>
         </Container>

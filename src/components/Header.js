@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import { styled } from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const NavBarWrapper = styled.div`
   position: relative;
@@ -10,7 +10,7 @@ const NavBarWrapper = styled.div`
   padding: 20px 0;
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
-  /* background-color: #000; */
+  background-color: #000;
 
   & .navbar {
     padding: 0;
@@ -210,14 +210,14 @@ const Header = () => {
                     Contact Us
                   </NavLink>
                 </Nav.Item>
-                <Nav.Item>
-                  <NavLink
-                    className="nav-link text-black bg-white mx-4 px-4 text-center fw-semibold"
-                    to="/"
-                  >
-                    Sign In
-                  </NavLink>
-                </Nav.Item>
+                {/* <Nav.Item> */}
+                <button
+                  className="nav-link text-black bg-white mx-4 px-4 text-center fw-semibold rounded-2"
+                  to="/"
+                >
+                  Sign In
+                </button>
+                {/* </Nav.Item> */}
               </Nav>
             </Navbar.Collapse>
           </Navbar>

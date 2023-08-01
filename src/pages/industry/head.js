@@ -107,7 +107,7 @@ function Head({ title, subtitle, image, aboutTitle, noBtns }) {
           </ButtonsContainer>
         )}
       </InfoContainer>
-      <HeroImage src={image} />
+      {image && <HeroImage src={image} />}
     </HeadContainer>
   );
 }
