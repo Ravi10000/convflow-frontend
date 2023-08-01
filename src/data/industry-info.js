@@ -209,7 +209,7 @@ export const industries = {
     image: assets.startup,
     title: 'Startups',
     subtitle:
-      'Develop proprietary LLMs inhouse. Boost productivity, improve customer experience, and streamline operations.',
+      'Build your moat as a GenAI startup. Why build wrappers around GPT when you can build with proprietary LLMs. Use ConvFlow to ship your MVP and iterate blazingly fast.',
     story: {
       title: 'Reducing Customer Support Costs by 50% while CSATs Stayed Intact',
       description:

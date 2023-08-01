@@ -5,7 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Head from './head';
 import FeatureCard from './feature-card/feature-card';
 import CustomButton from 'src/components/custom-button/custom-button';
-import CustomCarousel from 'src/components/carousel/carousel';
+// import CustomCarousel from 'src/components/carousel/carousel';
 import GetStartedCard from 'src/components/get-started-card/get-started-card';
 import SuccessStory from 'src/components/success-story/success-story';
 
@@ -22,7 +22,7 @@ function IndustryPage() {
       navigate('/industries/financial-services');
     }
     setIndustry(industries?.[id] || industries?.['financial-services']);
-  }, [id]);
+  }, [id, navigate]);
   return (
     <div className={styles.container}>
       <Head

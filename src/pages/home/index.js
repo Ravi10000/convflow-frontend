@@ -1,13 +1,13 @@
 import React from 'react';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { styled } from 'styled-components';
 import { BsArrowRight } from 'react-icons/bs';
-import CustomCarousel from 'src/components/carousel/carousel';
+// import CustomCarousel from 'src/components/carousel/carousel';
 import GetStartedCard from 'src/components/get-started-card/get-started-card';
 import ContactPage from 'src/pages/contactus';
 import CustomButton from 'src/components/custom-button/custom-button';
 import SuccessStory from 'src/components/success-story/success-story';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Products from 'src/components/products/products';
 const assets = {
   // heroImg: 'assets/images/hero-img.png',
@@ -39,8 +39,8 @@ const successStory = {
 
 const HeroImg = styled.img`
   margin-top: 5rem;
-  max-width: 500px;
-  max-height: 500px;
+  max-width: 400px;
+  max-height: 400px;
 `;
 
 const HeroSection = styled.section`
@@ -62,7 +62,7 @@ const Background = styled.img`
   object-fit: cover;
 `;
 const TitleContainer = styled.div`
-  margin-top: 3rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,28 +82,28 @@ const Subtitle = styled.p`
   font-weight: 300;
 `;
 
-const HeroLink = styled.a`
-  padding: 1rem 2rem;
-  display: inline-block;
-  margin: ${(props) => (props.$noMarginX ? '0' : '0 0.5rem')};
-  border-radius: 32px;
-  border: none;
-  position: relative;
-  background: var(--primary-linear-gradient);
-  z-index: 1;
+// const HeroLink = styled.a`
+//   padding: 1rem 2rem;
+//   display: inline-block;
+//   margin: ${(props) => (props.$noMarginX ? '0' : '0 0.5rem')};
+//   border-radius: 32px;
+//   border: none;
+//   position: relative;
+//   background: var(--primary-linear-gradient);
+//   z-index: 1;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    bottom: 2px;
-    left: 2px;
-    border-radius: 32px;
-    background-color: #000;
-    z-index: -1;
-  }
-`;
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     top: 2px;
+//     right: 2px;
+//     bottom: 2px;
+//     left: 2px;
+//     border-radius: 32px;
+//     background-color: #000;
+//     z-index: -1;
+//   }
+// `;
 
 const Heading = styled.h2`
   font-weight: 500;
@@ -112,18 +112,18 @@ const Heading = styled.h2`
   line-height: 1.5;
 `;
 
-const ProductWrapper = styled.section`
-  background-image: url(${assets.bgImg});
-  background-repeat: no-repeat;
-  background-position: center center;
+// const ProductWrapper = styled.section`
+//   background-image: url(${assets.bgImg});
+//   background-repeat: no-repeat;
+//   background-position: center center;
 
-  a {
-    padding: 1rem 4rem;
-    border: 1px solid #497cff;
-    border-radius: 4px;
-    display: inline-block;
-  }
-`;
+//   a {
+//     padding: 1rem 4rem;
+//     border: 1px solid #497cff;
+//     border-radius: 4px;
+//     display: inline-block;
+//   }
+// `;
 
 const HighLightText = styled.h3`
   font-family: var(--secondary-font);
@@ -162,63 +162,63 @@ const HighLightText = styled.h3`
   }
 `;
 
-const Widget = styled.div`
-  padding: 3rem;
-  background-color: #171717;
-  border-radius: 12px;
+// const Widget = styled.div`
+//   padding: 3rem;
+//   background-color: #171717;
+//   border-radius: 12px;
 
-  h2 {
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-  }
+//   h2 {
+//     font-weight: 700;
+//     margin-bottom: 1.5rem;
+//   }
 
-  p {
-    margin-bottom: 1.5rem;
-  }
+//   p {
+//     margin-bottom: 1.5rem;
+//   }
 
-  a {
-    padding: 1rem 2rem;
-    background: linear-gradient(225deg, #18c8ff 15%, #933ffe 100%);
-    border-radius: 8px;
-    display: inline-block;
-  }
-`;
+//   a {
+//     padding: 1rem 2rem;
+//     background: linear-gradient(225deg, #18c8ff 15%, #933ffe 100%);
+//     border-radius: 8px;
+//     display: inline-block;
+//   }
+// `;
 
-const FormWrapper = styled.div`
-  margin-top: 2rem;
+// const FormWrapper = styled.div`
+//   margin-top: 2rem;
 
-  .form-control {
-    background-color: transparent;
-    border: 0;
-    border-radius: 0;
-    border-bottom: 2px solid #fff;
-    color: #fff;
+//   .form-control {
+//     background-color: transparent;
+//     border: 0;
+//     border-radius: 0;
+//     border-bottom: 2px solid #fff;
+//     color: #fff;
 
-    &:focus {
-      box-shadow: none;
-      border: 0;
-      border-bottom: 2px solid #fff;
-    }
-    &::placeholder {
-      color: rgba(255, 255, 255, 0.75);
-      opacity: 1;
-    }
-  }
-  button[type='submit'] {
-    background: transparent;
-    border: 1px solid #f0a6cb;
-    padding: 0.8rem 2.5rem;
-    border-radius: 32px;
+//     &:focus {
+//       box-shadow: none;
+//       border: 0;
+//       border-bottom: 2px solid #fff;
+//     }
+//     &::placeholder {
+//       color: rgba(255, 255, 255, 0.75);
+//       opacity: 1;
+//     }
+//   }
+//   button[type='submit'] {
+//     background: transparent;
+//     border: 1px solid #f0a6cb;
+//     padding: 0.8rem 2.5rem;
+//     border-radius: 32px;
 
-    &:focus {
-      background-color: transparent;
-      border: 1px solid #f0a6cb;
-    }
-    svg {
-      margin-left: 1rem;
-    }
-  }
-`;
+//     &:focus {
+//       background-color: transparent;
+//       border: 1px solid #f0a6cb;
+//     }
+//     svg {
+//       margin-left: 1rem;
+//     }
+//   }
+// `;
 
 const Home = () => {
   const navigate = useNavigate();

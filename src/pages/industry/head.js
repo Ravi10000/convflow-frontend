@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { industries } from 'src/data/industry-info.js';
+// import { industries } from 'src/data/industry-info.js';
 import CustomButton from 'src/components/custom-button/custom-button';
 import { useNavigate } from 'react-router-dom';
 

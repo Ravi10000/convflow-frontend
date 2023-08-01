@@ -6,28 +6,28 @@ import GetStartedCard from 'src/components/get-started-card/get-started-card';
 import { useNavigate, useParams } from 'react-router-dom';
 import CustomButton from 'src/components/custom-button/custom-button';
 
-const HeroLink = styled.a`
-  padding: 1rem 2rem;
-  display: inline-block;
-  margin: ${(props) => (props.$noMarginX ? '0' : '0 0.5rem')};
-  border-radius: 32px;
-  border: none;
-  position: relative;
-  background: var(--primary-linear-gradient);
-  z-index: 1;
+// const HeroLink = styled.a`
+//   padding: 1rem 2rem;
+//   display: inline-block;
+//   margin: ${(props) => (props.$noMarginX ? '0' : '0 0.5rem')};
+//   border-radius: 32px;
+//   border: none;
+//   position: relative;
+//   background: var(--primary-linear-gradient);
+//   z-index: 1;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    bottom: 2px;
-    left: 2px;
-    border-radius: 32px;
-    background-color: #000;
-    z-index: -1;
-  }
-`;
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     top: 2px;
+//     right: 2px;
+//     bottom: 2px;
+//     left: 2px;
+//     border-radius: 32px;
+//     background-color: #000;
+//     z-index: -1;
+//   }
+// `;
 
 const MainHead = styled.h1`
   font-weight: 600;
@@ -50,7 +50,7 @@ const Product = () => {
       navigate('/products/train');
     }
     setProduct(products?.[id] || products?.['train']);
-  }, [id]);
+  }, [id, navigate]);
   return (
     <>
       <section>
