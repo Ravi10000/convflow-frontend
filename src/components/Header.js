@@ -4,13 +4,15 @@ import { styled } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 const NavBarWrapper = styled.div`
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 1000;
   padding: 20px 0;
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
-  background-color: #000;
+  /* background-color: #000; */
 
   & .navbar {
     padding: 0;

@@ -22,6 +22,7 @@ const Logo = styled.a`
 
 const StyledFooter = styled.section`
   color: #fff;
+  margin-top: auto;
 
   ul {
     list-style-type: none;
