@@ -1,0 +1,26 @@
+name: Convflow Website CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+    build:
+      runs-on: self-hosted
+
+      strategy: 
+        matrix:
+            node-version: [18.12.0]
+
+      steps:
+        - uses: actions/checkout@v2
+          with:
+            clean: 'false'
+        - name: Use Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@v1
+          with:
+              node-version: ${{ matrix.node-version }}
+        - name: Install npm dependenciespsql -h localhost -d barbera -U barbera -f barbera_20230727.sql
+          run: npm install
+        - name: Restart pm2 service
+          run: pm2 restart 0 || pm2 start npm --name "backend" -- run start || true
