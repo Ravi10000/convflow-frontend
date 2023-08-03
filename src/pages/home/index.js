@@ -126,12 +126,17 @@ const Heading = styled.h2`
 // `;
 
 const HighLightText = styled.h3`
-  font-family: var(--secondary-font);
+  /* font-family: var(--secondary-font); */
   margin-bottom: 1.5rem;
-  span {
+  .highlight {
     background: linear-gradient(270deg, #00f0ff 10%, #5200ff 60%, #ff2df7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 2.5rem;
+    font-weight: 400;
   }
   & ~ p {
     margin-bottom: 3rem;
@@ -220,11 +225,18 @@ const HighLightText = styled.h3`
 //   }
 // `;
 
+const Section = styled.section`
+  p {
+    font-size: 1.35rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+`;
 const Home = () => {
   const navigate = useNavigate();
   return (
     <>
-      <section>
+      <Section>
         <HeroSection>
           <Background src={assets.heroBg} />
           <Container>
@@ -237,7 +249,11 @@ const Home = () => {
                   adoption within weeks!
                 </Subtitle>
                 <div>
-                  <CustomButton onClick={() => navigate('/contact-us')}>
+                  <CustomButton
+                    onClick={() =>
+                      window.open('https://app.convflow.com', '_blank')
+                    }
+                  >
                     Get Started
                   </CustomButton>
                   <span className="m-2"></span>
@@ -319,10 +335,11 @@ const Home = () => {
           </Col>
         </Row>
         <Container>
-          <Row className="justify-content-around mb-4">
+          <Row className="justify-content-around align-items-center mb-4">
             <Col xs={12} md={6} lg={5} className="order-2 order-md-1">
               <HighLightText>
-                <span>Secure and Private Deployments</span>,<br /> made easy
+                <span className="highlight">Secure & Private Deployments,</span>
+                <br /> <span className="subtitle">Made Easy</span>
               </HighLightText>
               <p>
                 Your models and applications can be simply deployed on your VPC
@@ -338,13 +355,15 @@ const Home = () => {
               <img src={assets.deployment} alt="" />
             </Col>
           </Row>
-          <Row className="justify-content-around mb-4">
+          <Row className="justify-content-around align-items-center mb-4">
             <Col xs={12} md={6} lg={5}>
               <img src={assets.data} alt="" />
             </Col>
             <Col xs={12} md={6} lg={5}>
               <HighLightText>
-                <span>Your data</span>,<br /> Your model
+                <span className="highlight">Your Data,</span>
+                <br />
+                <span className="subtitle">Your Model</span>
               </HighLightText>
               <p>
                 Own the model that's trained on your own data. Build proprietary
@@ -356,10 +375,12 @@ const Home = () => {
               </a>
             </Col>
           </Row>
-          <Row className="justify-content-around mb-4">
+          <Row className="justify-content-around align-items-center mb-4">
             <Col xs={12} md={6} lg={5} className="order-2 order-md-1">
               <HighLightText>
-                <span>Build Fast</span>,<br /> Test Faster
+                <span className="highlight">Build Fast,</span>
+                <br />
+                <span className="subtitle">Test Faster</span>
               </HighLightText>
               <p>
                 Our drag and drop no-code platform allows you to cut significant
@@ -376,7 +397,7 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </Section>
       <GetStartedCard />
       <ContactPage />
     </>

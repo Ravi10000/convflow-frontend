@@ -21,9 +21,6 @@ const Logo = styled.a`
 `;
 
 const StyledFooter = styled.section`
-  color: #fff;
-  margin-top: auto;
-
   ul {
     list-style-type: none;
     padding: 0;
@@ -54,9 +51,13 @@ const IconList = styled.ul`
 
 const FooterExtra = styled.div`
   background-color: var(--color-primary);
-  border-top: 1px solid #98a2b3;
+  /* border-top: 1px solid #98a2b3; */
+  border-top: 1px solid rgba(234, 236, 240, 0.16);
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  width: 95%;
+  align-self: center;
 
   p {
     margin: 0;
@@ -81,12 +82,18 @@ const Footer = () => {
   return (
     <>
       <StyledFooter>
-        <Container style={{ color: '#999999' }}>
+        <Container
+          style={{
+            color: '#999999',
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+        >
           <Row className="gx-3 gy-3">
             <Col xs={12} md={12} lg={4}>
               <Logo href="#home">
-                <img src="/assets/images/convflow-logo.svg" alt="" />
-                <h2>ConvFlow</h2>
+                <img src="/assets/images/full-logo.svg" alt="" />
+                {/* <h2>ConvFlow</h2> */}
               </Logo>
               <p style={{ maxWidth: '300px' }}>
                 This growth plan will help you reach your resolutions and
@@ -231,7 +238,7 @@ const Footer = () => {
             </Col>
           </Row>
           <FooterExtra>
-            <p>&#169; 2077 ApolloNFT. All rights reserved.</p>
+            <p>&#169; 2023 ConvFlow. All rights reserved.</p>
           </FooterExtra>
         </Container>
       </StyledFooter>

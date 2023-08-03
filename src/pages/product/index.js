@@ -79,7 +79,11 @@ const Product = () => {
               >
                 {product.subtitle}
               </p>
-              <CustomButton onClick={() => navigate('/contact-us')}>
+              <CustomButton
+                onClick={() =>
+                  window.open('https://app.convflow.com', '_blank')
+                }
+              >
                 Get started
               </CustomButton>
               <span className="m-2"></span>
@@ -164,7 +168,11 @@ const Product = () => {
                   <p>{item.description}</p>
                 </div>
               ))}
-              <CustomButton onClick={() => navigate('/contact-us')}>
+              <CustomButton
+                onClick={() =>
+                  window.open('https://app.convflow.com', '_blank')
+                }
+              >
                 Get started
               </CustomButton>
               <span className="m-2"></span>

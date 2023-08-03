@@ -81,3 +81,9 @@ a {
   letter-spacing: 1px;
   font-weight: 1.25rem;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}

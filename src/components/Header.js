@@ -160,8 +160,9 @@ const Header = () => {
         <Container>
           <Navbar expand="lg">
             <NavbarBrand href="/">
-              <img src="/assets/images/convflow-logo.svg" alt="" />
-              ConvFlow
+              {/* <img src="/assets/images/convflow-logo.svg" alt="" /> */}
+              <img src="/assets/images/full-logo.svg" alt="" />
+              {/* ConvFlow */}
             </NavbarBrand>
             <NavBarToggler aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -264,12 +265,14 @@ const Header = () => {
                   </NavLink>
                 </Nav.Item>
                 {/* <Nav.Item> */}
-                <button
-                  className="nav-link text-black bg-white mx-4 px-4 text-center fw-semibold rounded-2"
-                  to="/"
-                >
-                  Sign In
-                </button>
+                <a href="https://app.convflow.com/" target="_blank">
+                  <button
+                    className="nav-link text-black bg-white mx-4 px-4 text-center fw-semibold rounded-2"
+                    onClick={() => navigate('https://app.convflow.com/')}
+                  >
+                    Sign In
+                  </button>
+                </a>
                 {/* </Nav.Item> */}
               </Nav>
             </Navbar.Collapse>

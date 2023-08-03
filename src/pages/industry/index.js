@@ -54,7 +54,9 @@ function IndustryPage() {
             ))}
           </div>
           <div className={styles.buttonsContainer}>
-            <CustomButton onClick={() => navigate('/contact-us')}>
+            <CustomButton
+              onClick={() => window.open('https://app.convflow.com', '_blank')}
+            >
               Get started
             </CustomButton>
             <span className="m-2"></span>

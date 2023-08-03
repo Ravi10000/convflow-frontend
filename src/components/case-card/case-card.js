@@ -7,7 +7,7 @@ function CaseCard({ case: { title, description, link, image }, reverse }) {
   return (
     <div className={`${styles.featureCard} ${reverse && styles.reverse}`}>
       <div className={styles.infoGroup}>
-        <div className={styles.title}>{title}</div>
+        <h3 className={styles.title}>{title}</h3>
         <div className={styles.description}>{description}</div>
         <CustomButton fit onClick={() => navigate(link || '/contact-us')}>
           See Demo

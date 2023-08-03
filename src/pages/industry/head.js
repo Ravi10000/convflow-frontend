@@ -107,7 +107,7 @@ function Head({
         </TitleContainer>
         {!noBtns && (
           <ButtonsContainer>
-            <CustomButton onClick={() => navigate('/contact-us')}>
+            <CustomButton onClick={() => window.open('https://app.convflow.com', '_blank')}>
               Get started
             </CustomButton>
             <CustomButton secondary onClick={() => navigate('/contact-us')}>
