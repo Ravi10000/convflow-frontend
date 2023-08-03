@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import { styled } from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const NavBarWrapper = styled.div`
   position: sticky;
@@ -149,6 +149,11 @@ const NavBarToggler = styled(Navbar.Toggle)`
 `;
 
 const Header = () => {
+  const navigate = useNavigate();
+  const handleNavSelect = (selectedKey) => {
+    console.log(selectedKey);
+    navigate(selectedKey);
+  };
   return (
     <>
       <NavBarWrapper>
@@ -160,7 +165,7 @@ const Header = () => {
             </NavbarBrand>
             <NavBarToggler aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ms-auto mt-3 mt-lg-0">
+              <Nav className="ms-auto mt-3 mt-lg-0" onSelect={handleNavSelect}>
                 <Nav.Item className="ms-0 ms-lg-3">
                   <NavLink className="nav-link" to="/home">
                     Home
@@ -172,6 +177,52 @@ const Header = () => {
                   </NavLink>
                 </Nav.Item>
                 <NavDropdown title="Industries" className="ms-0 ms-lg-3">
+                  <NavDropdown.Item
+                    className="dropdown-item"
+                    eventKey="/industries/financial-services"
+                  >
+                    Financial services
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    className="dropdown-item"
+                    eventKey="/industries/management-consulting"
+                  >
+                    Consulting and research
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    className="dropdown-item"
+                    eventKey="/industries/insurance"
+                  >
+                    Insurance
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    className="dropdown-item"
+                    eventKey="/industries/startups"
+                  >
+                    Startups
+                  </NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title="Products" className="ms-0 ms-lg-3">
+                  <NavDropdown.Item
+                    className="dropdown-item"
+                    eventKey="/products/train"
+                  >
+                    Train
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    className="dropdown-item"
+                    eventKey="/products/inference"
+                  >
+                    Inference
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    className="dropdown-item"
+                    eventKey="/products/platform"
+                  >
+                    Data platform
+                  </NavDropdown.Item>
+                </NavDropdown>
+                {/* <NavDropdown title="Industries" className="ms-0 ms-lg-3">
                   <NavLink
                     className="dropdown-item"
                     to="/industries/financial-services"
@@ -190,8 +241,8 @@ const Header = () => {
                   <NavLink className="dropdown-item" to="/industries/startups">
                     Startups
                   </NavLink>
-                </NavDropdown>
-                <NavDropdown title="Products" className="ms-0 ms-lg-3">
+                </NavDropdown>  */}
+                {/* <NavDropdown title="Products" className="ms-0 ms-lg-3">
                   <NavLink className="dropdown-item" to="/products/train">
                     Train
                   </NavLink>
@@ -201,7 +252,7 @@ const Header = () => {
                   <NavLink className="dropdown-item" to="/products/platform">
                     Data platform
                   </NavLink>
-                </NavDropdown>
+                </NavDropdown> */}
                 <Nav.Item className="ms-0 ms-lg-3">
                   <NavLink className="nav-link" to="/use-cases">
                     Use Cases

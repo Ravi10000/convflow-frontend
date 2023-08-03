@@ -43,7 +43,7 @@ const TitleContainer = styled.div`
 const MainTitle = styled.h1`
   color: #fff;
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 4rem;
 `;
 const ButtonsContainer = styled.div`
   display: flex;
@@ -57,7 +57,8 @@ const Title = styled.span`
     #5c24ff 75.83%,
     #d94fd5 100%
   );
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 4rem;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -65,9 +66,9 @@ const Title = styled.span`
 
 const Subtitle = styled.p`
   font-weight: 300;
-  font-size: 1.2rem;
-  max-width: 500px;
-  line-height: 1.5;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  max-width: 600px;
 `;
 const HeroImage = styled.img`
   width: 80%;
@@ -78,15 +79,23 @@ const HeroImage = styled.img`
   }
 `;
 
-function Head({ title, subtitle, image, aboutTitle, noBtns }) {
+function Head({
+  title,
+  additionalTitleContent,
+  subtitle,
+  image,
+  gradientTitle,
+  noBtns
+}) {
   const navigate = useNavigate();
   return (
     <HeadContainer>
       <InfoContainer>
         <TitleContainer>
-          {aboutTitle ? (
+          {gradientTitle ? (
             <MainTitle>
-              <Title>{aboutTitle}</Title>
+              <Title>{gradientTitle}</Title>{' '}
+              {additionalTitleContent && additionalTitleContent}
             </MainTitle>
           ) : (
             <MainTitle>

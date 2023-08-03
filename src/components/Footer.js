@@ -88,7 +88,7 @@ const Footer = () => {
                 <img src="/assets/images/convflow-logo.svg" alt="" />
                 <h2>ConvFlow</h2>
               </Logo>
-              <p>
+              <p style={{ maxWidth: '300px' }}>
                 This growth plan will help you reach your resolutions and
                 achieve the goals you have been striving towards.
               </p>
@@ -125,7 +125,8 @@ const Footer = () => {
                 <li>
                   <p
                     style={{
-                      fontWeight: 600,
+                      fontSize: '1.2rem',
+                      fontWeight: 500,
                       marginBottom: '10px',
                       color: '#fff'
                     }}

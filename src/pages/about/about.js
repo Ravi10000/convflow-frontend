@@ -14,7 +14,7 @@ function AboutPage() {
     <div className={styles.aboutPage}>
       <Head
         noBtns
-        aboutTitle={about?.title}
+        gradientTitle={about?.title}
         subtitle={about?.subtitle}
         // image={about.image}
       />

@@ -5,6 +5,7 @@ import { products } from 'src/data/product-info';
 import GetStartedCard from 'src/components/get-started-card/get-started-card';
 import { useNavigate, useParams } from 'react-router-dom';
 import CustomButton from 'src/components/custom-button/custom-button';
+import Head from '../industry/head';
 
 // const HeroLink = styled.a`
 //   padding: 1rem 2rem;
@@ -31,10 +32,13 @@ import CustomButton from 'src/components/custom-button/custom-button';
 
 const MainHead = styled.h1`
   font-weight: 600;
+  font-size: 4rem;
   margin-bottom: 2rem;
 `;
 
 const HighLightText = styled.span`
+  /* font-size: 4rem; */
+  /* font-weight: 600; */
   background: var(--primary-linear-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -58,14 +62,23 @@ const Product = () => {
           <Row>
             <Col xs={12} md={6}>
               <MainHead>
-                <HighLightText>{product.title.highlightText}</HighLightText>
-                <br />
+                <HighLightText>{product.title.highlightText} </HighLightText>
+                {/* <br /> */}
                 {product.title.normalText}
                 {product.title.highlightText2 && (
                   <HighLightText>{product.title.highlightText2}</HighLightText>
                 )}
               </MainHead>
-              <p className="mb-5">{product.subtitle}</p>
+              <p
+                className="mb-5"
+                style={{
+                  fontSize: '1.5rem',
+                  fontWeight: 300,
+                  letterSpacing: '1px'
+                }}
+              >
+                {product.subtitle}
+              </p>
               <CustomButton onClick={() => navigate('/contact-us')}>
                 Get started
               </CustomButton>
@@ -84,14 +97,29 @@ const Product = () => {
         <Container>
           <Row>
             <Col xs={12}>
-              <h2 className="mb-5">{product.discovers.title}</h2>
+              <h2 className="mb-5" style={{ fontSize: '3rem' }}>
+                {product.discovers.title}
+              </h2>
             </Col>
           </Row>
-          <Row className="justify-content-center gx-5">
+          <Row className="justify-content-center align-items-center gx-5">
             {product.discovers.items.map((item, index) => (
               <Col key={index} xs={12} md={6} lg={4}>
-                <h3 className="mb-3">{item.title}</h3>
-                <p>{item.description}</p>
+                <h3
+                  className="mb-3"
+                  style={{ fontWeight: 400, fontSize: '2.2rem' }}
+                >
+                  {item.title}
+                </h3>
+                <p
+                  style={{
+                    fontSize: '1.2rem',
+                    fontWeight: 300,
+                    letterSpacing: '1px'
+                  }}
+                >
+                  {item.description}
+                </p>
               </Col>
             ))}
           </Row>

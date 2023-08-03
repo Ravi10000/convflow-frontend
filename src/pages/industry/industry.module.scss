@@ -2,19 +2,20 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 150px;
   overflow: hidden;
   .featuresContainer {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 50px;
   }
   .benefitsContainer {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     p {
-      font-size: 1.2rem;
+      letter-spacing: 1px;
+      font-size: 1.35rem;
       font-weight: 300;
     }
     .group {
@@ -35,6 +36,7 @@
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+        letter-spacing: 1px;
         .benefit {
           h4 {
             font-size: 2rem;

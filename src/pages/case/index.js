@@ -1,7 +1,11 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { styled } from 'styled-components';
-
+import { useNavigate } from 'react-router-dom';
+import CustomButton from 'src/components/custom-button/custom-button';
+import Head from '../industry/head';
+import { useCases } from '../../data/use-cases-info';
+import CaseCard from 'src/components/case-card/case-card';
 const assets = {
   productImg: '/assets/images/form-img.png',
   useCase: '/assets/images/useCase.svg',
@@ -21,56 +25,16 @@ const HighLightText = styled.span`
   -webkit-text-fill-color: transparent;
 `;
 
-const HeroLink = styled.a`
-  padding: 1rem 2rem;
-  display: inline-block;
-  margin: ${(props) => (props.$noMarginX ? '0' : '0 0.5rem')};
-  border-radius: 32px;
-  border: none;
-  position: relative;
-  background: var(--primary-linear-gradient);
-  z-index: 1;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    bottom: 2px;
-    left: 2px;
-    border-radius: 32px;
-    background-color: #000;
-    z-index: -1;
-  }
-`;
-
 const UseCases = () => {
+  const navigate = useNavigate();
   return (
     <>
-      <section>
-        <Container>
-          <Row>
-            <Col xs={12} md={6}>
-              <MainHead>
-                <HighLightText>
-                  The Fastest Way to Build Generative AI{' '}
-                </HighLightText>
-                <br />
-                Use Cases.
-              </MainHead>
-              <p className="mb-5">
-                From customer facing chatbots to internal search engines on
-                enterprise data, prove use cases in days not months.
-              </p>
-              <HeroLink href="#link">Get started</HeroLink>
-              <HeroLink href="#link">Talk to us</HeroLink>
-            </Col>
-            <Col xs={12} md={6}>
-              <img src={assets.useCase} alt="" />
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <Head
+        image={assets.useCase}
+        gradientTitle="The Fastest Way to Build Generative AI"
+        additionalTitleContent="Use Cases."
+        subtitle="From customer facing chatbots to internal search engines on enterprise data, prove use cases in days not months."
+      />
       <section>
         <Container>
           <Row>
@@ -78,7 +42,12 @@ const UseCases = () => {
               <h1 className="mb-5">What would you like to build?</h1>
             </Col>
           </Row>
-          <Row className="mb-5">
+          <div>
+            {useCases.map((_case, index) => (
+              <CaseCard case={_case} key={index} reverse={index % 2 !== 0} />
+            ))}
+          </div>
+          {/* <Row className="mb-5">
             <Col xs={12} md={6}>
               <h3>Customer Support</h3>
               <p>
@@ -91,9 +60,7 @@ const UseCases = () => {
                 support team spends time on by using LLM powered customer
                 support agents.
               </p>
-              <HeroLink href="#link" $noMarginX>
-                See Demo
-              </HeroLink>
+              <CustomButton fit>See Demo</CustomButton>
             </Col>
             <Col xs={12} md={6}>
               <img src={assets.support} alt="" />
@@ -114,9 +81,7 @@ const UseCases = () => {
                 document and automate business workflows. Your employees will
                 thank you.
               </p>
-              <HeroLink href="#link" $noMarginX>
-                See Demo
-              </HeroLink>
+              <CustomButton fit>See Demo</CustomButton>
             </Col>
           </Row>
           <Row className="mb-5">
@@ -133,14 +98,12 @@ const UseCases = () => {
                 why imagine when you can build this all-knowing AI engine with
                 LLMs today?
               </p>
-              <HeroLink href="#link" $noMarginX>
-                See Demo
-              </HeroLink>
+              <CustomButton fit>See Demo</CustomButton>
             </Col>
             <Col xs={12} md={6}>
               <img src={assets.searchEngine} alt="" />
             </Col>
-          </Row>
+          </Row> */}
         </Container>
       </section>
     </>

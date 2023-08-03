@@ -75,3 +75,9 @@ textarea,
 select {
   font-family: 'ClashGrotesk-Regular';
 }
+
+p,
+a {
+  letter-spacing: 1px;
+  font-weight: 1.25rem;
+}

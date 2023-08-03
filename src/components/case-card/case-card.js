@@ -1,16 +1,16 @@
-import styles from './feature-card.module.scss';
+import styles from './case-card.module.scss';
 import { useNavigate } from 'react-router-dom';
 import CustomButton from 'src/components/custom-button/custom-button';
 
-function FeatureCard({ feature: { title, subtitle, link, image }, reverse }) {
+function CaseCard({ case: { title, description, link, image }, reverse }) {
   const navigate = useNavigate();
   return (
     <div className={`${styles.featureCard} ${reverse && styles.reverse}`}>
       <div className={styles.infoGroup}>
         <div className={styles.title}>{title}</div>
-        <div className={styles.description}>{subtitle}</div>
-        <CustomButton fit onClick={() => navigate('/contact-us')}>
-          Talk to us
+        <div className={styles.description}>{description}</div>
+        <CustomButton fit onClick={() => navigate(link || '/contact-us')}>
+          See Demo
         </CustomButton>
       </div>
       <img src={image} alt={title} className={styles.image} />
@@ -18,4 +18,4 @@ function FeatureCard({ feature: { title, subtitle, link, image }, reverse }) {
   );
 }
 
-export default FeatureCard;
+export default CaseCard;
