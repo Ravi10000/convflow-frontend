@@ -20,12 +20,7 @@
     z-index: -1;
   }
   &.secondaryBtn {
-    border: 2px solid #fff;
-    color: #fff;
-    background: #000;
-    &::before {
-      display: none;
-    }
+    background: #fff;
   }
   &.fit {
     width: fit-content;

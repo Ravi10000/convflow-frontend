@@ -13,7 +13,8 @@ const assets = {
   // heroImg: 'assets/images/hero-img.png',
   // heroImg: 'assets/images/hero.svg',
   heroImg: 'assets/images/hero-new.svg',
-  heroBg: 'assets/images/hero-bg.svg',
+  // heroBg: 'assets/images/hero-bg.svg',
+  heroBg: 'assets/images/hero-bg.png',
   group: 'assets/images/group-icon.png',
   bgImg: 'assets/images/bg-img.png',
   // train: 'assets/images/train.png',
@@ -58,7 +59,7 @@ const Background = styled.img`
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  opacity: 0.5;
+  opacity: 0.6;
   object-fit: cover;
 `;
 const TitleContainer = styled.div`
