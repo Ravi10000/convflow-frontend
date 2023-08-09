@@ -1,51 +1,57 @@
-.container {
+.positioning {
   display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  align-items: center;
-  background: #171717;
-  border-radius: 1.5rem;
-  padding: 20px;
-  max-width: 1200px;
-  .details {
+  justify-content: center;
+  .container {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    .heading {
-      font-weight: 600;
-      width: fit-content;
-      background: linear-gradient(
-        90deg,
-        #ff3bff 0%,
-        #ecbfbf 38.02%,
-        #5c24ff 75.83%,
-        #d94fd5 100%
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background: #171717;
+    border-radius: 1.5rem;
+    padding: 20px;
+    max-width: 1200px;
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .heading {
+        font-weight: 600;
+        width: fit-content;
+        background: linear-gradient(
+          90deg,
+          #ff3bff 0%,
+          #ecbfbf 38.02%,
+          #5c24ff 75.83%,
+          #d94fd5 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .title {
+        max-width: 600px;
+        font-size: 2.5rem;
+      }
+      .description {
+        font-size: 1.4rem;
+        max-width: 700px;
+        font-weight: 300;
+      }
     }
-    .title {
-      max-width: 600px;
-      font-size: 2.5rem;
+    .image {
+      max-width: 400px;
+      height: fit-content;
+      max-height: 400px;
     }
-    .description {
-      font-size: 1.4rem;
-      max-width: 700px;
-      font-weight: 300;
-    }
-  }
-  .image {
-    max-width: 400px;
-    height: fit-content;
-    max-height: 400px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container {
-    gap: 50px;
-    padding: 30px 70px;
-    flex-direction: row;
+  .positioning {
+    .container {
+      gap: 50px;
+      padding: 30px 70px;
+      flex-direction: row;
+    }
   }
 }

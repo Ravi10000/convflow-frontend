@@ -101,11 +101,7 @@ const Contact = () => {
               placeholder="company"
               name="company"
             />
-            <CustomInput
-              Icon={BsSignpost}
-              placeholder="regarding"
-              name="regarding"
-            />
+            <CustomInput Icon={BsSignpost} placeholder="title" name="title" />
           </div>
           <div className={styles.inputGroup}>
             <CustomTextarea

@@ -32,7 +32,7 @@ export const industries = {
     subtitle:
       'Develop proprietary LLMs inhouse. Boost productivity, improve customer experience, and streamline operations.',
     story: {
-      title: 'Enhancing Buy Side Equity Research with Domain Specific LLMs',
+      title: 'Enhancing Equity Research with Domain Specific LLMs',
       description:
         'With a Private ChatGPT-like system built on finetuned open source LLMs, this investment management firm was able to discover crucial insights to shape their decision making. They used ConvFlow to finetune LLMs on data from 50,000+ companies and go live within 4 weeks!'
     },
@@ -68,7 +68,8 @@ export const industries = {
     ],
     benefits: {
       image: assets.benefits,
-      title: 'The Easiest Way to Build and Scale Generative AI Applications.',
+      title: 'The Easiest Way to Finetune LLMs',
+      // title: 'The Easiest Way to Build and Scale Generative AI Applications.',
       subtitle:
         'ConvFlow makes it super easy to train, deploy and operationalize LLMs for custom GenAI applications.',
       content: [
@@ -96,8 +97,7 @@ export const industries = {
     subtitle:
       'Develop proprietary LLMs inhouse. Boost productivity, improve customer experience, and streamline operations.',
     story: {
-      title:
-        'Boosting Analyst Productivity by 30% at a Leading Market Research Firm',
+      title: 'Boosting Analyst Productivity by 30% at a Market Research Firm',
       description:
         'Market Research firms usually spend weeks searching for information across the internet, regulatory bodies websites, annual reports, and proprietary sources. A market research company used ConvFlow to automate a large part of the research and analysis process by deploying a private and secure ChatGPT-like system for its analysts and consultants.'
     },
@@ -126,7 +126,8 @@ export const industries = {
     ],
     benefits: {
       image: assets.benefits,
-      title: 'The Easiest Way to Build and Scale Generative AI Applications.',
+      title: 'The Easiest Way to Finetune LLMs',
+      // title: 'The Easiest Way to Build and Scale Generative AI Applications.',
       subtitle:
         'ConvFlow makes it super easy to train, deploy and operationalize LLMs for custom GenAI applications.',
       content: [
@@ -183,7 +184,8 @@ export const industries = {
     ],
     benefits: {
       image: assets.benefits,
-      title: 'The Easiest Way to Build and Scale Generative AI Applications.',
+      title: 'The Easiest Way to Finetune LLMs',
+      // title: 'The Easiest Way to Build and Scale Generative AI Applications.',
       subtitle:
         'ConvFlow makes it super easy to train, deploy and operationalize LLMs for custom GenAI applications.',
       content: [
@@ -240,7 +242,8 @@ export const industries = {
     ],
     benefits: {
       image: assets.benefits,
-      title: 'The Easiest Way to Build and Scale Generative AI Applications.',
+      title: 'The Easiest Way to Finetune LLMs',
+      // title: 'The Easiest Way to Build and Scale Generative AI Applications.',
       subtitle:
         'ConvFlow makes it super easy to train, deploy and operationalize LLMs for custom GenAI applications.',
       content: [

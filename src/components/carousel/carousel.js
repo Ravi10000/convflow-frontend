@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import { styled } from 'styled-components';
+import { carouselInfo } from 'src/data/carsouel-info';
 
 const assets = {
   heroImg: '/assets/images/hero-img.png',
@@ -42,7 +43,7 @@ const HeroLink = styled.a`
 const HeroCarousel = styled(Carousel)`
   width: 100%;
   background: #171717;
-  padding: 30px;
+  padding: 50px;
   border-radius: 10px;
 
   & .carousel-indicators {
@@ -73,6 +74,9 @@ const HeroCarousel = styled(Carousel)`
 
 const SwiperHead = styled.h5`
   background: var(--primary-linear-gradient);
+  width: fit-content;
+  font-weight: 600;
+  font-size: 2rem;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
@@ -84,7 +88,7 @@ function CustomCarousel() {
       <Row>
         <Col xs={12}>
           <HeroCarousel controls={false}>
-            <Carousel.Item interval={1000}>
+            {/* <Carousel.Item interval={1000}>
               <Row className="gx-5">
                 <Col xs={12} md={6}>
                   <SwiperHead>Customer Success Story</SwiperHead>
@@ -146,28 +150,27 @@ function CustomCarousel() {
                   <img src={assets.group} alt="" />
                 </Col>
               </Row>
-            </Carousel.Item>
-            <Carousel.Item interval={3000}>
-              <Row className="gx-5">
-                <Col xs={12} md={6}>
-                  <SwiperHead>Customer Success Story</SwiperHead>
-                  <h3 className="mb-4">
-                    Reimagining Insurance Buying with LLMs
-                  </h3>
-                  <p className="mb-5">
-                    Learn more on how one of our early adopters in the Insurance
-                    sector is leveraging the power of Generative AI to increase
-                    conversion rates through its network of field sales agents.
-                  </p>
-                  <HeroLink href="#link" $noMarginX>
-                    Read Case Study
-                  </HeroLink>
-                </Col>
-                <Col xs={12} md={6} className="text-center">
-                  <img src={assets.group} alt="" />
-                </Col>
-              </Row>
-            </Carousel.Item>
+            </Carousel.Item> */}
+            {carouselInfo?.map((item, i) => (
+              <Carousel.Item interval={i * 1000}>
+                <Row className="gx-5">
+                  <Col xs={12} md={7}>
+                    <SwiperHead>Customer Success Story</SwiperHead>
+                    <h3 className="mb-4">{item?.title}</h3>
+                    <p className="mb-5">{item?.description}</p>
+                    <HeroLink href="#link" $noMarginX>
+                      Read Case Study
+                    </HeroLink>
+                  </Col>
+                  <Col xs={12} md={5} className="text-center">
+                    <img
+                      src={item?.image || '/assets/images/successStory.svg'}
+                      alt={item?.title}
+                    />
+                  </Col>
+                </Row>
+              </Carousel.Item>
+            ))}
           </HeroCarousel>
         </Col>
       </Row>

@@ -182,13 +182,13 @@ const Header = () => {
                     className="dropdown-item"
                     eventKey="/industries/financial-services"
                   >
-                    Financial services
+                    Financial Services
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     className="dropdown-item"
                     eventKey="/industries/management-consulting"
                   >
-                    Consulting and research
+                    Consulting and Research
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     className="dropdown-item"
@@ -220,7 +220,7 @@ const Header = () => {
                     className="dropdown-item"
                     eventKey="/products/platform"
                   >
-                    Data platform
+                    Data Platform
                   </NavDropdown.Item>
                 </NavDropdown>
                 {/* <NavDropdown title="Industries" className="ms-0 ms-lg-3">

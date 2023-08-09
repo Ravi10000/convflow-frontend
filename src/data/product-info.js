@@ -29,7 +29,7 @@ export const products = {
             'You have the ownership and control of the LLMs that you train and finetune. Do not share data with third party service providers and position yourself as an AI leader.'
         },
         {
-          title: 'Privacy and security at the core',
+          title: 'Privacy at the core',
           description:
             'All the data that you use to train and finetune your models will never leave your system. The GPUs used for training will be on your VPC, orchestrated by our IaC layer.'
         }
@@ -79,7 +79,7 @@ export const products = {
             'Do not waste time figuring out the how of building LLM powered applications. ConvFlow enables you with out-of-the-box components that make it super easy to knit together an LLM app in mere weeks.'
         },
         {
-          title: 'Maintain control of data and IP',
+          title: 'Maintain control of your data and IP',
           description:
             'You have the ownership and control of the applications that you build with ConvFlow. Do not share data with third party service providers and position yourself as an AI leader.'
         },

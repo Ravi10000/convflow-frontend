@@ -83,6 +83,7 @@ const Footer = () => {
     <>
       <StyledFooter>
         <Container
+          fluid
           style={{
             color: '#999999',
             display: 'flex',
@@ -96,8 +97,9 @@ const Footer = () => {
                 {/* <h2>ConvFlow</h2> */}
               </Logo>
               <p style={{ maxWidth: '300px' }}>
-                This growth plan will help you reach your resolutions and
-                achieve the goals you have been striving towards.
+                Easily train, deploy, and operationalize LLMs on your data, in
+                your secure environment. Go from GenAI mandate to GenAI adoption
+                within weeks!
               </p>
               <IconList>
                 <li className="icon-item">
@@ -110,7 +112,7 @@ const Footer = () => {
                     <FaLinkedin style={{ color: '#98A2B3' }} />
                   </a>
                 </li>
-                <li className="icon-item">
+                {/* <li className="icon-item">
                   <a href="#link">
                     <FaFacebook style={{ color: '#98A2B3' }} />
                   </a>
@@ -124,10 +126,10 @@ const Footer = () => {
                   <a href="#link">
                     <FaDribbble style={{ color: '#98A2B3' }} />
                   </a>
-                </li>
+                </li> */}
               </IconList>
             </Col>
-            <Col xs={6} md={6} lg={2}>
+            {/* <Col xs={6} md={6} lg={2}>
               <ul>
                 <li>
                   <p
@@ -151,8 +153,61 @@ const Footer = () => {
                   <Link to="#link">Our Creator</Link>
                 </li>
               </ul>
+            </Col> */}
+            <Col xs={6} md={6} lg={2}>
+              <ul>
+                <li>
+                  <p
+                    style={{
+                      fontSize: '1.2rem',
+                      fontWeight: 500,
+                      marginBottom: '10px',
+                      color: '#fff'
+                    }}
+                  >
+                    Industries
+                  </p>
+                </li>
+                <li style={{ color: '#999999' }}>
+                  <Link to="#link">Financial Services</Link>
+                </li>
+                <li style={{ color: '#999999' }}>
+                  <Link to="#link">Consulting & Research</Link>
+                </li>
+                <li style={{ color: '#999999' }}>
+                  <Link to="#link">Insuarace</Link>
+                </li>
+                <li style={{ color: '#999999' }}>
+                  <Link to="#link">Startups</Link>
+                </li>
+              </ul>
             </Col>
             <Col xs={6} md={6} lg={2}>
+              <ul>
+                <li>
+                  <p
+                    style={{
+                      fontSize: '1.2rem',
+                      fontWeight: 500,
+                      marginBottom: '10px',
+                      color: '#fff'
+                    }}
+                  >
+                    Products
+                  </p>
+                </li>
+                <li style={{ color: '#999999' }}>
+                  <Link to="#link">Train</Link>
+                </li>
+                <li style={{ color: '#999999' }}>
+                  <Link to="#link">Inference</Link>
+                </li>
+                <li style={{ color: '#999999' }}>
+                  <Link to="#link">Data Platform</Link>
+                </li>
+              </ul>
+            </Col>
+            {/* <Col xs={6} md={6} lg={2}>
               <ul>
                 <p
                   style={{
@@ -173,7 +228,7 @@ const Footer = () => {
                   <Link to="#link">Tutorial</Link>
                 </li>
               </ul>
-            </Col>
+            </Col> */}
             <Col xs={6} md={6} lg={2}>
               <ul>
                 <p
@@ -189,23 +244,23 @@ const Footer = () => {
                   className="d-flex align-items-center"
                   style={{ color: '#999999' }}
                 >
-                  <Link to="#link">Media</Link>
+                  <Link to="#link">About us</Link>
                 </li>
                 <li
                   className="d-flex align-items-center"
                   style={{ color: '#999999' }}
                 >
-                  <Link to="#link">Blog</Link>
+                  <Link to="#link">Privacy Policy</Link>
                 </li>
                 <li
                   className="d-flex align-items-center"
                   style={{ color: '#999999' }}
                 >
-                  <Link to="#link">Pricing</Link>
+                  <Link to="#link">Terns & Conditions</Link>
                 </li>
               </ul>
             </Col>
-            <Col xs={6} md={6} lg={2}>
+            {/* <Col xs={6} md={6} lg={2}>
               <ul>
                 <p
                   style={{
@@ -235,7 +290,7 @@ const Footer = () => {
                   <Link to="#link">Support</Link>
                 </li>
               </ul>
-            </Col>
+            </Col> */}
           </Row>
           <FooterExtra>
             <p>&#169; 2023 ConvFlow. All rights reserved.</p>

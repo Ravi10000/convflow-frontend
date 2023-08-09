@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from 'styled-components';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import { BsArrowRight } from 'react-icons/bs';
 // import CustomCarousel from 'src/components/carousel/carousel';
 import GetStartedCard from 'src/components/get-started-card/get-started-card';
@@ -9,6 +9,7 @@ import CustomButton from 'src/components/custom-button/custom-button';
 import SuccessStory from 'src/components/success-story/success-story';
 import { useNavigate } from 'react-router-dom';
 import Products from 'src/components/products/products';
+import CustomCarousel from 'src/components/carousel/carousel';
 const assets = {
   // heroImg: 'assets/images/hero-img.png',
   // heroImg: 'assets/images/hero.svg',
@@ -270,7 +271,8 @@ const Home = () => {
           </Container>
           <HeroImg src={assets.heroImg} alt="" />
         </HeroSection>
-        <SuccessStory story={successStory} />
+        <CustomCarousel />
+        {/* <SuccessStory story={successStory} /> */}
         {/* </section>
       <ProductWrapper>
         <Container>
