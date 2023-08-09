@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './contact-us.module.scss';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { BsArrowRight } from 'react-icons/bs';
 import { sendForm } from 'src/api';
 import { styled } from 'styled-components';

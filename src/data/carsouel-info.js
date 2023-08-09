@@ -1,7 +1,3 @@
-const assets = {
-  formImg: '/assets/images/form-img.png'
-};
-
 export const carouselInfo = [
   {
     title: 'Enhancing Equity Research with Domain Specific LLMs',

@@ -1,12 +1,12 @@
 import React from 'react';
 import { styled } from 'styled-components';
-import { Carousel, Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { BsArrowRight } from 'react-icons/bs';
 // import CustomCarousel from 'src/components/carousel/carousel';
 import GetStartedCard from 'src/components/get-started-card/get-started-card';
 import ContactPage from 'src/pages/contactus';
 import CustomButton from 'src/components/custom-button/custom-button';
-import SuccessStory from 'src/components/success-story/success-story';
+// import SuccessStory from 'src/components/success-story/success-story';
 import { useNavigate } from 'react-router-dom';
 import Products from 'src/components/products/products';
 import CustomCarousel from 'src/components/carousel/carousel';
@@ -33,11 +33,11 @@ const assets = {
   calender: 'assets/images/calender.png',
   formImg: 'assets/images/form-img.png'
 };
-const successStory = {
-  title: 'Reimagining Insurance Buying with LLMs',
-  description:
-    'Learn more on how one of our early adopters in the Insurance sector is leveraging the power of Generative AI to increase conversion rates through its network of field sales agents.'
-};
+// const successStory = {
+//   title: 'Reimagining Insurance Buying with LLMs',
+//   description:
+//     'Learn more on how one of our early adopters in the Insurance sector is leveraging the power of Generative AI to increase conversion rates through its network of field sales agents.'
+// };
 
 const HeroImg = styled.img`
   margin-top: 5rem;
@@ -74,6 +74,7 @@ const TitleContainer = styled.div`
 `;
 const MainTitle = styled.h1`
   background: var(--primary-linear-gradient);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 500;
@@ -132,6 +133,7 @@ const HighLightText = styled.h3`
   margin-bottom: 1.5rem;
   .highlight {
     background: linear-gradient(270deg, #00f0ff 10%, #5200ff 60%, #ff2df7 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2.5rem;

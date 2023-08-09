@@ -265,7 +265,7 @@ const Header = () => {
                   </NavLink>
                 </Nav.Item>
                 {/* <Nav.Item> */}
-                <a href="https://app.convflow.com/" target="_blank">
+                <a href="https://app.convflow.com/" target="_blank" rel="noreferrer">
                   <button
                     className="nav-link text-black bg-white mx-4 px-4 text-center fw-semibold rounded-2"
                     onClick={() => navigate('https://app.convflow.com/')}

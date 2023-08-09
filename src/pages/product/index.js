@@ -5,7 +5,7 @@ import { products } from 'src/data/product-info';
 import GetStartedCard from 'src/components/get-started-card/get-started-card';
 import { useNavigate, useParams } from 'react-router-dom';
 import CustomButton from 'src/components/custom-button/custom-button';
-import Head from '../industry/head';
+// import Head from '../industry/head';
 
 // const HeroLink = styled.a`
 //   padding: 1rem 2rem;
@@ -40,6 +40,7 @@ const HighLightText = styled.span`
   /* font-size: 4rem; */
   /* font-weight: 600; */
   background: var(--primary-linear-gradient);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;

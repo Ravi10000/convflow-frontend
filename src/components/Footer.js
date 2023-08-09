@@ -3,9 +3,9 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { styled } from 'styled-components';
 import { Link } from 'react-router-dom';
 import {
-  FaDribbble,
-  FaFacebook,
-  FaGithub,
+  // FaDribbble,
+  // FaFacebook,
+  // FaGithub,
   FaLinkedin,
   FaTwitter
 } from 'react-icons/fa';
@@ -169,16 +169,20 @@ const Footer = () => {
                   </p>
                 </li>
                 <li style={{ color: '#999999' }}>
-                  <Link to="#link">Financial Services</Link>
+                  <Link to="/industries/financial-services">
+                    Financial Services
+                  </Link>
                 </li>
                 <li style={{ color: '#999999' }}>
-                  <Link to="#link">Consulting & Research</Link>
+                  <Link to="/industries/management-consulting">
+                    Consulting & Research
+                  </Link>
                 </li>
                 <li style={{ color: '#999999' }}>
-                  <Link to="#link">Insuarace</Link>
+                  <Link to="/industries/insurance">Insurance</Link>
                 </li>
                 <li style={{ color: '#999999' }}>
-                  <Link to="#link">Startups</Link>
+                  <Link to="/industries/startups">Startups</Link>
                 </li>
               </ul>
             </Col>
@@ -197,13 +201,13 @@ const Footer = () => {
                   </p>
                 </li>
                 <li style={{ color: '#999999' }}>
-                  <Link to="#link">Train</Link>
+                  <Link to="/products/train">Train</Link>
                 </li>
                 <li style={{ color: '#999999' }}>
-                  <Link to="#link">Inference</Link>
+                  <Link to="/products/inference">Inference</Link>
                 </li>
                 <li style={{ color: '#999999' }}>
-                  <Link to="#link">Data Platform</Link>
+                  <Link to="/products/platform">Data Platform</Link>
                 </li>
               </ul>
             </Col>

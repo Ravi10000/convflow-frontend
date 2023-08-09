@@ -9,6 +9,7 @@ import UseCasePage from './pages/case';
 import { Routes, Route } from 'react-router-dom';
 import ContactPage from './pages/contactus';
 import AboutPage from './pages/about/about';
+import ScrollToTop from './components/scroll-to-top';
 // import api from './api';
 
 const GlobalStyle = createGlobalStyle`
@@ -63,6 +64,7 @@ const GlobalStyle = createGlobalStyle`
 const App = () => {
   return (
     <div className="App">
+      <ScrollToTop />
       <GlobalStyle />
       <Header />
       <Routes>

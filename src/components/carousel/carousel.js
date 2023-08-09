@@ -3,20 +3,6 @@ import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import { styled } from 'styled-components';
 import { carouselInfo } from 'src/data/carsouel-info';
 
-const assets = {
-  heroImg: '/assets/images/hero-img.png',
-  group: '/assets/images/group-icon.png',
-  bgImg: '/assets/images/bg-img.png',
-  train: '/assets/images/train.png',
-  interface: '/assets/images/interface.png',
-  cloud: '/assets/images/cloud.png',
-  model: '/assets/images/model.png',
-  testing: '/assets/images/testing.png',
-  group1: '/assets/images/group-icon-1.png',
-  calender: '/assets/images/calender.png',
-  formImg: '/assets/images/form-img.png'
-};
-
 const HeroLink = styled.a`
   padding: 1rem 2rem;
   display: inline-block;
@@ -44,7 +30,7 @@ const HeroCarousel = styled(Carousel)`
   width: 100%;
   background: #171717;
   padding: 50px;
-  border-radius: 10px;
+  border-radius: 1.5rem;
 
   & .carousel-indicators {
     margin-bottom: -3rem;
@@ -77,6 +63,7 @@ const SwiperHead = styled.h5`
   width: fit-content;
   font-weight: 600;
   font-size: 2rem;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;

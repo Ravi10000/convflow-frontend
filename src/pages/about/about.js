@@ -1,4 +1,3 @@
-import Head from 'src/pages/industry/head';
 import styles from './about.module.scss';
 import TeamGroup from 'src/components/team-group/team-group';
 // import Journery from 'src/components/journery/journery';
