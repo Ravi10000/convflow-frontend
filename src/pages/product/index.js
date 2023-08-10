@@ -143,7 +143,13 @@ const Product = () => {
               </h2>
             </Col>
             <Col xs={12}>
-              <img src={product.module.img} alt="" />
+              <img
+                src={product.module.img}
+                alt=""
+                style={{
+                  borderRadius: '1rem'
+                }}
+              />
             </Col>
           </Row>
         </Container>

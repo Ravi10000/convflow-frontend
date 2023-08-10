@@ -91,7 +91,7 @@ const Footer = () => {
           }}
         >
           <Row className="gx-3 gy-3">
-            <Col xs={12} md={12} lg={4}>
+            <Col xs={12} md={12} lg={6}>
               <Logo href="#home">
                 <img src="/assets/images/full-logo.svg" alt="" />
                 {/* <h2>ConvFlow</h2> */}
@@ -154,6 +154,7 @@ const Footer = () => {
                 </li>
               </ul>
             </Col> */}
+            {/* <Col xs={0} md={0} lg={1}></Col> */}
             <Col xs={6} md={6} lg={2}>
               <ul>
                 <li>
@@ -260,7 +261,7 @@ const Footer = () => {
                   className="d-flex align-items-center"
                   style={{ color: '#999999' }}
                 >
-                  <Link to="#link">Terns & Conditions</Link>
+                  <Link to="#link">Terms & Conditions</Link>
                 </li>
               </ul>
             </Col>

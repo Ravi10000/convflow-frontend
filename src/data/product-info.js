@@ -3,15 +3,15 @@ const assets = {
   defaultImg: '/assets/images/form-img.png',
   trainImg: '/assets/images/train.png',
   inferenceImg: '/assets/images/inference.png',
-  dataPlatformImg: '/assets/images/data-platform.png'
+  dataPlatformImg: '/assets/images/data-platform-croped.png'
 };
 export const products = {
   train: {
     // image: assets.defaultImg,
     title: {
-      highlightText: 'The Easiest Way to Train',
-      normalText: 'and Finetune ',
-      highlightText2: 'LLMs.'
+      highlightText: 'The Easiest Way to',
+      normalText: 'Finetune LLMs.',
+      // highlightText2: 'LLMs.'
     },
     subtitle:
       'Use ConvFlow Train to train, deploy and operationalise LLMs at scale. Get started in minutes and deploy in weeks.',
@@ -65,8 +65,8 @@ export const products = {
   inference: {
     // image: assets.defaultImg,
     title: {
-      highlightText: 'The Fastest Way to Build LLM Applications',
-      normalText: 'for Enterprises.'
+      highlightText: 'The Fastest Way to ',
+      normalText: 'Build LLM Applications'
     },
     subtitle:
       'Unleash the Power of No-Code AI with ConvFlow Inference. Seamlessly construct LLM pipelines, select from a variety of LLMs, and expedite your Generative AI initiatives by 10x.',
