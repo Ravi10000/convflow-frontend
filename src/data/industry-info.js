@@ -126,8 +126,8 @@ export const industries = {
     ],
     benefits: {
       image: assets.benefits,
-      title: 'The Easiest Way to Finetune LLMs',
-      // title: 'The Easiest Way to Build and Scale Generative AI Applications.',
+      // title: 'The Easiest Way to Finetune LLMs',
+      title: 'The Easiest Way to Build and Scale Generative AI Applications.',
       subtitle:
         'ConvFlow makes it super easy to train, deploy and operationalize LLMs for custom GenAI applications.',
       content: [
@@ -184,8 +184,8 @@ export const industries = {
     ],
     benefits: {
       image: assets.benefits,
-      title: 'The Easiest Way to Finetune LLMs',
-      // title: 'The Easiest Way to Build and Scale Generative AI Applications.',
+      // title: 'The Easiest Way to Finetune LLMs',
+      title: 'The Easiest Way to Build and Scale Generative AI Applications.',
       subtitle:
         'ConvFlow makes it super easy to train, deploy and operationalize LLMs for custom GenAI applications.',
       content: [
@@ -242,8 +242,8 @@ export const industries = {
     ],
     benefits: {
       image: assets.benefits,
-      title: 'The Easiest Way to Finetune LLMs',
-      // title: 'The Easiest Way to Build and Scale Generative AI Applications.',
+      // title: 'The Easiest Way to Finetune LLMs',
+      title: 'The Easiest Way to Build and Scale Generative AI Applications.',
       subtitle:
         'ConvFlow makes it super easy to train, deploy and operationalize LLMs for custom GenAI applications.',
       content: [
