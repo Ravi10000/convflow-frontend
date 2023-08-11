@@ -142,7 +142,7 @@ const Product = () => {
                 </HighLightText>
               </h2>
             </Col>
-            <Col xs={12}>
+            {/* <Col xs={12}>
               <img
                 src={product.module.img}
                 alt=""
@@ -150,7 +150,24 @@ const Product = () => {
                   borderRadius: '1rem'
                 }}
               />
-            </Col>
+            </Col> */}
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+              }}
+            >
+              <img
+                style={{
+                  maxWidth: '800px',
+                  height: 'fit-content',
+                  borderRadius: '1rem'
+                }}
+                src={product.module.img}
+                alt=""
+              />
+            </div>
           </Row>
         </Container>
       </section>

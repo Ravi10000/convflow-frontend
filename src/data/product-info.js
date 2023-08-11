@@ -1,7 +1,8 @@
 const assets = {
   convflow: '/assets/images/convflow.png',
   defaultImg: '/assets/images/form-img.png',
-  trainImg: '/assets/images/train.png',
+  // trainImg: '/assets/images/train.png',
+  trainImg: '/assets/images/product-train-img.svg',
   inferenceImg: '/assets/images/inference.png',
   dataPlatformImg: '/assets/images/data-platform-croped.png'
 };
@@ -10,7 +11,7 @@ export const products = {
     // image: assets.defaultImg,
     title: {
       highlightText: 'The Easiest Way to',
-      normalText: 'Finetune LLMs.',
+      normalText: 'Finetune LLMs.'
       // highlightText2: 'LLMs.'
     },
     subtitle:
