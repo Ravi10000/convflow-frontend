@@ -103,12 +103,20 @@ const Footer = () => {
               </p>
               <IconList>
                 <li className="icon-item">
-                  <a href="#link">
+                  <a
+                    href="https://twitter.com/getconvflow?t=RXhtqmOqUSn_KA7KoaAMJQ&s=08"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <FaTwitter style={{ color: '#98A2B3' }} />
                   </a>
                 </li>
                 <li className="icon-item">
-                  <a href="#link">
+                  <a
+                    href="https://www.linkedin.com/company/convflow/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <FaLinkedin style={{ color: '#98A2B3' }} />
                   </a>
                 </li>
@@ -249,7 +257,7 @@ const Footer = () => {
                   className="d-flex align-items-center"
                   style={{ color: '#999999' }}
                 >
-                  <Link to="#link">About us</Link>
+                  <Link to="/about-us">About us</Link>
                 </li>
                 <li
                   className="d-flex align-items-center"

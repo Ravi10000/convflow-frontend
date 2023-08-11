@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import { styled } from 'styled-components';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 const NavBarWrapper = styled.div`
   position: sticky;
@@ -149,6 +149,7 @@ const NavBarToggler = styled(Navbar.Toggle)`
 `;
 
 const Header = () => {
+  const { pathname } = useLocation();
   const navigate = useNavigate();
   const handleNavSelect = (selectedKey) => {
     console.log(selectedKey);
@@ -156,6 +157,9 @@ const Header = () => {
   };
   const [scrolled, setScrolled] = React.useState(false);
 
+  useEffect(() => {
+    handleNavSelect(pathname);
+  }, [pathname]);
   useEffect(() => {
     window.addEventListener('scroll', () => {
       setScrolled(window.scrollY > 200);
@@ -178,7 +182,7 @@ const Header = () => {
             </NavbarBrand>
             <NavBarToggler aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ms-auto mt-3 mt-lg-0" onSelect={handleNavSelect}>
+              <Nav className="ms-auto mt-3 mt-lg-0">
                 <Nav.Item className="ms-0 ms-lg-3">
                   <NavLink className="nav-link" to="/home">
                     Home
@@ -191,49 +195,81 @@ const Header = () => {
                 </Nav.Item>
                 <NavDropdown title="Industries" className="ms-0 ms-lg-3">
                   <NavDropdown.Item
-                    className="dropdown-item"
-                    eventKey="/industries/financial-services"
+                    className={`dropdown-item ${
+                      pathname === '/industries/financial-services'
+                        ? '_active'
+                        : ''
+                    }`}
+                    onClick={() => navigate('/industries/financial-services')}
                   >
                     Financial Services
                   </NavDropdown.Item>
                   <NavDropdown.Item
-                    className="dropdown-item"
-                    eventKey="/industries/management-consulting"
+                    className={`dropdown-item ${
+                      pathname === '/industries/management-consulting'
+                        ? '_active'
+                        : ''
+                    }`}
+                    onClick={() =>
+                      navigate('/industries/management-consulting')
+                    }
                   >
                     Consulting and Research
                   </NavDropdown.Item>
                   <NavDropdown.Item
-                    className="dropdown-item"
-                    eventKey="/industries/insurance"
+                    className={`dropdown-item ${
+                      pathname === '/industries/insurance' ? '_active' : ''
+                    }`}
+                    onClick={() => navigate('/industries/insurance')}
                   >
                     Insurance
                   </NavDropdown.Item>
                   <NavDropdown.Item
-                    className="dropdown-item"
-                    eventKey="/industries/startups"
+                    className={`dropdown-item ${
+                      pathname === '/industries/startups' ? '_active' : ''
+                    }`}
+                    onClick={() => navigate('/industries/startups')}
                   >
                     Startups
                   </NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Products" className="ms-0 ms-lg-3">
                   <NavDropdown.Item
-                    className="dropdown-item"
-                    eventKey="/products/train"
+                    className={`dropdown-item ${
+                      pathname === '/products/train' ? '_active' : ''
+                    }`}
+                    onClick={() => navigate('/products/train')}
                   >
                     Train
                   </NavDropdown.Item>
                   <NavDropdown.Item
-                    className="dropdown-item"
-                    eventKey="/products/inference"
+                    className={`dropdown-item ${
+                      pathname === '/products/inference' ? '_active' : ''
+                    }`}
+                    onClick={() => navigate('/products/inference')}
                   >
                     Inference
                   </NavDropdown.Item>
                   <NavDropdown.Item
+                    className={`dropdown-item ${
+                      pathname === '/products/platform' ? '_active' : ''
+                    }`}
+                    onClick={() => navigate('/products/platform')}
+                  >
+                    Data Platform
+                  </NavDropdown.Item>
+                  {/* <NavDropdown.Item
+                    className="dropdown-item"
+                    eventKey="/products/inference"
+                  >
+                    Inference
+                  </NavDropdown.Item> */}
+                  {/* <NavDropdown.Item
                     className="dropdown-item"
                     eventKey="/products/platform"
                   >
                     Data Platform
-                  </NavDropdown.Item>
+                  </NavDropdown.Item> */}
                 </NavDropdown>
                 {/* <NavDropdown title="Industries" className="ms-0 ms-lg-3">
                   <NavLink
