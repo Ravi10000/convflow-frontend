@@ -151,20 +151,13 @@ const NavBarToggler = styled(Navbar.Toggle)`
 const Header = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
-  const handleNavSelect = (selectedKey) => {
-    console.log(selectedKey);
-    navigate(selectedKey);
-  };
   const [scrolled, setScrolled] = React.useState(false);
 
-  useEffect(() => {
-    handleNavSelect(pathname);
-  }, [pathname]);
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      setScrolled(window.scrollY > 200);
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', () => {
+  //     setScrolled(window.scrollY > 200);
+  //   });
+  // }, []);
 
   return (
     <>
