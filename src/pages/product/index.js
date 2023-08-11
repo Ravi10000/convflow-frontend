@@ -160,7 +160,7 @@ const Product = () => {
             >
               <img
                 style={{
-                  maxWidth: '800px',
+                  maxWidth: '1000px',
                   height: 'fit-content',
                   borderRadius: '1rem'
                 }}

@@ -1,8 +1,8 @@
 const assets = {
   convflow: '/assets/images/convflow.png',
   defaultImg: '/assets/images/form-img.png',
-  // trainImg: '/assets/images/train.png',
-  trainImg: '/assets/images/product-train-img.svg',
+  trainImg: '/assets/images/train.png',
+  featuresImg: '/assets/images/product-train-img.svg',
   inferenceImg: '/assets/images/inference.png',
   dataPlatformImg: '/assets/images/data-platform-croped.png'
 };
@@ -48,7 +48,7 @@ export const products = {
         normalText: 'Everything you need to build on top of',
         highlightText: 'Open Source LLMs'
       },
-      img: assets.trainImg,
+      img: assets.featuresImg,
       items: [
         {
           title: 'All it needs is a few clicks!',
@@ -103,7 +103,7 @@ export const products = {
         normalText: 'Everything you need to build and deploy your',
         highlightText: 'LLM Application'
       },
-      img: assets.trainImg,
+      img: assets.featuresImg,
       items: [
         {
           title: 'Drag and drop. No code.',
@@ -158,7 +158,7 @@ export const products = {
         normalText: 'Everything you need to manage data for your',
         highlightText: 'LLM Application'
       },
-      img: assets.trainImg,
+      img: assets.featuresImg,
       items: [
         {
           title: 'From labeling to monitoring.',
