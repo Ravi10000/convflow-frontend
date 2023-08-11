@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import { styled } from 'styled-components';
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -154,9 +154,21 @@ const Header = () => {
     console.log(selectedKey);
     navigate(selectedKey);
   };
+  const [scrolled, setScrolled] = React.useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setScrolled(window.scrollY > 200);
+    });
+  }, []);
+
   return (
     <>
-      <NavBarWrapper>
+      <NavBarWrapper
+        style={{
+          backgroundColor: scrolled ? '#000' : 'transparent'
+        }}
+      >
         <Container>
           <Navbar expand="lg">
             <NavbarBrand href="/">
@@ -265,7 +277,11 @@ const Header = () => {
                   </NavLink>
                 </Nav.Item>
                 {/* <Nav.Item> */}
-                <a href="https://app.convflow.com/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://app.convflow.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <button
                     className="nav-link text-black bg-white mx-4 px-4 text-center fw-semibold rounded-2"
                     onClick={() => navigate('https://app.convflow.com/')}

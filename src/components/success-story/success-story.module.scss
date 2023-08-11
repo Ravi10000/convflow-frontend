@@ -9,7 +9,9 @@
     background: #171717;
     border-radius: 1.5rem;
     padding: 20px;
+    width: 100%;
     max-width: 1200px;
+    text-align: center;
     .details {
       display: flex;
       flex-direction: column;
@@ -46,6 +48,13 @@
   }
 }
 
+@media (min-width: 768px) {
+  .positioning {
+    .container {
+      text-align: left;
+    }
+  }
+}
 @media (min-width: 1200px) {
   .positioning {
     .container {
