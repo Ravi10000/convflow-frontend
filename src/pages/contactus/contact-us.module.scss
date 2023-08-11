@@ -1,6 +1,6 @@
 .contactUs {
+  padding: 20px;
   form {
-    padding: 20px;
   }
   .inputGroup {
     display: flex;
@@ -57,6 +57,7 @@
 }
 @media (min-width: 768px) {
   .contactUs {
+    padding: 50px;
     form {
       max-width: 1200px;
       display: grid;
