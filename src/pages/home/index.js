@@ -272,7 +272,7 @@ const Home = () => {
               </TitleContainer>
             </Row>
           </Container>
-          <HeroImg src={assets.heroImg} alt="" />
+          {/* <HeroImg src={assets.heroImg} alt="" /> */}
         </HeroSection>
         <CustomCarousel />
         {/* <SuccessStory story={successStory} /> */}
