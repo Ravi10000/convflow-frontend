@@ -46,7 +46,8 @@ const HeroImg = styled.img`
 `;
 
 const HeroSection = styled.section`
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
