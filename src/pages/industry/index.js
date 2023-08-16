@@ -14,7 +14,6 @@ function IndustryPage() {
   const [industry, setIndustry] = useState(
     industries?.[id] || industries?.['financial-services']
   );
-  console.log({ industry });
 
   useEffect(() => {
     if (!industries.hasOwnProperty(id)) {

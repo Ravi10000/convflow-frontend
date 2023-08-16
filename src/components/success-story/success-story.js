@@ -2,7 +2,6 @@ import styles from './success-story.module.scss';
 import CustomButton from '../custom-button/custom-button';
 
 function SuccessStory({ story }) {
-  console.log({ story });
   return (
     <div className={styles.positioning}>
       <div className={styles.container}>

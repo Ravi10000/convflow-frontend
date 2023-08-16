@@ -139,7 +139,7 @@ function CustomCarousel() {
               </Row>
             </Carousel.Item> */}
             {carouselInfo?.map((item, i) => (
-              <Carousel.Item interval={i * 1000}>
+              <Carousel.Item interval={i * 1000} key={i}>
                 <Row className="gx-5">
                   <Col xs={12} md={7}>
                     <SwiperHead>Customer Success Story</SwiperHead>

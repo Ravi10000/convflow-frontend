@@ -186,8 +186,8 @@ const Product = () => {
           </Row>
           <Row>
             <Col xs={12} md={6}>
-              {product.features.items.map((item) => (
-                <div className="mb-4">
+              {product.features.items.map((item, index) => (
+                <div className="mb-4" key={index}>
                   <h4 className="mb-3">{item.title}</h4>
                   <p>{item.description}</p>
                 </div>
