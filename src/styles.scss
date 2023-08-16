@@ -5,3 +5,31 @@
 .dropdown-item {
   cursor: pointer;
 }
+
+._section_container {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  ._section {
+    padding: 0px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  a {
+    text-decoration: underline;
+    color: lightgray;
+  }
+}
+
+._center {
+  text-align: center;
+}
+
+._semibold {
+  font-weight: 500;
+}

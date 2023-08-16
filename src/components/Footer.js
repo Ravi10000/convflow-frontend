@@ -263,13 +263,13 @@ const Footer = () => {
                   className="d-flex align-items-center"
                   style={{ color: '#999999' }}
                 >
-                  <Link to="#link">Privacy Policy</Link>
+                  <Link to="/privacy-policy">Privacy Policy</Link>
                 </li>
                 <li
                   className="d-flex align-items-center"
                   style={{ color: '#999999' }}
                 >
-                  <Link to="#link">Terms & Conditions</Link>
+                  <Link to="/terms-and-conditions">Terms & Conditions</Link>
                 </li>
               </ul>
             </Col>

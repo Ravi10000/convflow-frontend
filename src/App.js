@@ -1,16 +1,11 @@
 import React, { Suspense, lazy } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { Routes, Route } from 'react-router-dom';
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 import ScrollToTop from './components/scroll-to-top';
-// import Home from 'src/pages/home';
-// import IndustryPage from './pages/industry';
-// import AboutPage from './pages/about/about';
-// import ContactPage from './pages/contactus';
-// import UseCasePage from './pages/case';
-// import ProductPage from './pages/product';
+
 import LoadingPage from './pages/loading/loading';
 const ProductPage = lazy(() => import('./pages/product'));
 const UseCasePage = lazy(() => import('./pages/case'));
@@ -18,7 +13,10 @@ const ContactPage = lazy(() => import('./pages/contactus'));
 const AboutPage = lazy(() => import('./pages/about/about'));
 const Home = lazy(() => import('src/pages/home'));
 const IndustryPage = lazy(() => import('./pages/industry'));
-// import api from './api';
+const TermsPage = lazy(() => import('./pages/terms/terms'));
+const PrivacyPolicyPage = lazy(() =>
+  import('./pages/privacy-policy/privacy-policy')
+);
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -83,6 +81,8 @@ const App = () => {
           <Route path="/use-cases" element={<UseCasePage />} />
           <Route path="/contact-us" element={<ContactPage />} />
           <Route path="/about-us" element={<AboutPage />} />
+          <Route path="/terms-and-conditions" element={<TermsPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </Suspense>
